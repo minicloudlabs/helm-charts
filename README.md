@@ -41,9 +41,8 @@ The command removes all the Kubernetes components associated with the chart and 
 | `image.tag`                               | Image tag                                     | `v2.1.0`                       |
 | `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                 |
 | `image.pullSecrets`                       | Image pull secrets                            | `{}`                           |
-| `service.port`                            | Kubernetes port where service is exposed      | `80`                           |
-| `service.portName`                        | Name of the port on the service               | `service`                      |
-| `service.targetPort`                      | Internal service port                         | `8080`                         |
+| `service.type`                            | Type of service                               | `ClusterIP`                    |
+| `service.port`                            | Port for kubernetes service                   | `80`                           |
 | `service.annotations`                     | Service annotations                           | `{}`                           |
 | `service.labels`                          | Custom labels                                 | `{}`                           |
 | `ingress.enabled`                         | Enables Ingress                               | `false`                        |
