@@ -39,8 +39,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: {{ .Values.service.portName }}
-              containerPort: {{ .Values.service.port }}
+            - name: http
+              containerPort: 8080
               protocol: TCP
           {{- if .Values.env }}
           env:
@@ -60,13 +60,13 @@ spec:
           readinessProbe:
             httpGet:
               path: /health
-              port: {{ .Values.service.portName }}
+              port: http
           {{- end }}
           {{- if .Values.livenessProbe.enabled }}
           livenessProbe:
             httpGet:
               path: /health
-              port: {{ .Values.service.portName }}
+              port: http
           {{- end }}
           resources:
 {{ toYaml .Values.resources | trim | indent 12 }}
