@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "gatus.fullname" . }}
+  namespace: {{ template "gatus.namespace" . }}
+  labels:
+    {{- include "gatus.labels" . | nindent 4 }}
+{{- if .Values.labels }}
+{{ toYaml .Values.labels | indent 4 }}
+{{- end }}
+{{- with .Values.annotations }}
+  annotations:
+{{ toYaml . | indent 4 }}
+{{- end }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      {{- include "gatus.selectorLabels" . | nindent 6 }}
+{{- with .Values.deploymentStrategy }}
+  strategy:
+{{ toYaml . | trim | indent 4 }}
+{{- end }}
+  template:
+    metadata:
+      labels:
+        {{- include "gatus.selectorLabels" . | nindent 8 }}
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+    spec:
+{{- if .Values.image.pullSecrets }}
+      imagePullSecrets:
+{{- range .Values.image.pullSecrets }}
+        - name: {{ . }}
+{{- end }}
+{{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: {{ .Values.service.portName }}
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          {{- if .Values.env }}
+          env:
+          {{- range $key, $value := .Values.env }}
+              - name: "{{ $key }}"
+                value: "{{ $value }}"
+          {{- end }}
+          {{- end }}
+          envFrom:
+            - configMapRef:
+                name: {{ include "gatus.fullname" . }}
+            {{- if .Values.secrets }}
+            - secretRef:
+                name: {{ include "gatus.fullname" . }}
+            {{- end }}
+          readinessProbe:
+{{ toYaml .Values.readinessProbe | trim | indent 12 }}
+          livenessProbe:
+{{ toYaml .Values.livenessProbe | trim | indent 12 }}
+          resources:
+{{ toYaml .Values.resources | trim | indent 12 }}
+          volumeMounts:
+            - name: {{ template "gatus.fullname" . }}-config
+              mountPath: /config
+      volumes:
+        - name: {{ template "gatus.fullname" . }}-config
+          configMap:
+            name: {{ template "gatus.fullname" . }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+      {{ toYaml . | indent 8 }}
+      {{- end }}
