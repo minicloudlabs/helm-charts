@@ -3,6 +3,17 @@ entries:
   gatus:
   - apiVersion: v1
     appVersion: v2.1.0
+    created: "2021-02-18T00:49:50.160903+01:00"
+    description: Automated service health dashboard
+    digest: 04c8c76ad220f4e61d50b0ef410c2e7370524d9259d8c732a01d6c5d4038b0f2
+    name: gatus
+    sources:
+    - https://github.com/TwinProduction/gatus
+    urls:
+    - gatus-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v1
+    appVersion: v2.1.0
     created: "2021-02-17T22:33:57.460128+01:00"
     description: Automated service health dashboard
     digest: 8a5b397b5dfad1c77b1dc4749148b10e886eb18e23059160ea5699f600831f46
