@@ -56,10 +56,18 @@ spec:
             - secretRef:
                 name: {{ include "gatus.fullname" . }}
             {{- end }}
+          {{- if .Values.readinessProbe.enabled }}
           readinessProbe:
-{{ toYaml .Values.readinessProbe | trim | indent 12 }}
+            httpGet:
+              path: /health
+              port: {{ .Values.service.portName }}
+          {{- end }}
+          {{- if .Values.livenessProbe.enabled }}
           livenessProbe:
-{{ toYaml .Values.livenessProbe | trim | indent 12 }}
+            httpGet:
+              path: /health
+              port: {{ .Values.service.portName }}
+          {{- end }}
           resources:
 {{ toYaml .Values.resources | trim | indent 12 }}
           volumeMounts:

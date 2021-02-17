@@ -6,16 +6,10 @@ deploymentStrategy:
   type: RollingUpdate
 
 readinessProbe:
-  httpGet:
-    path: /health
-    port: 8080
+  enabled: true
 
 livenessProbe:
-  httpGet:
-    path: /health
-    port: 8080
-  initialDelaySeconds: 10
-  timeoutSeconds: 5
+  enabled: true
 
 image:
   repository: twinproduction/gatus
