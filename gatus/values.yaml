@@ -1,5 +1,7 @@
 replicas: 1
 
+revisionHistoryLimit: 3
+
 # See `kubectl explain deployment.spec.strategy` for more
 # ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
 deploymentStrategy:
@@ -26,9 +28,8 @@ image:
 # or access it from within the cluster (ClusterIP service). Set the service type and the port to serve it.
 # ref: http://kubernetes.io/docs/user-guide/services/
 service:
+  type: ClusterIP
   port: 80
-  portName: service
-  targetPort: 8080
   annotations: {}
   labels: {}
 
