@@ -2,6 +2,33 @@
 
 * Installs the automated service health dashboard [Gatus](https://github.com/TwinProduction/gatus)
 
+## Get Repo Info
+
+```console
+helm repo add gatus https://avakarev.github.io/gatus-chart
+helm repo update
+```
+
+_See [helm repo](https://helm.sh/docs/helm/helm_repo/) for command documentation._
+
+## Installing the Chart
+
+To install the chart with the release name `my-release`:
+
+```console
+helm install my-release gatus/gatus
+```
+
+## Uninstalling the Chart
+
+To uninstall/delete the my-release deployment:
+
+```console
+helm delete my-release
+```
+
+The command removes all the Kubernetes components associated with the chart and deletes the release.
+
 ## Configuration
 
 | Parameter                                 | Description                                   | Default                        |
@@ -29,6 +56,28 @@
 | `resources`                               | CPU/Memory resource requests/limits           | `{}`                           |
 | `nodeSelector`                            | Node labels for pod assignment                | `{}`                           |
 | `config`                                  | [Gatus configuration][gatus-config]           | `{}`                           |
+
+### `helmfile.yaml` example
+
+```yaml
+---
+repositories:
+  - name: gatus
+    url: https://avakarev.github.io/gatus-chart
+
+releases:
+  - name: gatus
+    namespace: gatus
+    chart: gatus/gatus
+    version: 1.0.1
+    values:
+      - config:
+          services:
+            - name: Example
+              url: https://example.com
+              conditions:
+                - '[STATUS] == 200'
+```
 
 
 [gatus-config]: https://github.com/TwinProduction/gatus#configuration
