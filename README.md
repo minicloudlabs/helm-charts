@@ -41,6 +41,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | `image.tag`                               | Image tag                                     | `v2.1.0`                       |
 | `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                 |
 | `image.pullSecrets`                       | Image pull secrets                            | `{}`                           |
+| `hostNetwork.enabled`                     | Enable host network mode                      | `false`                        |
 | `service.type`                            | Type of service                               | `ClusterIP`                    |
 | `service.port`                            | Port for kubernetes service                   | `80`                           |
 | `service.annotations`                     | Service annotations                           | `{}`                           |
