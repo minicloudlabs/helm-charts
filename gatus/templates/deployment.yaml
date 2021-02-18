@@ -29,12 +29,15 @@ spec:
       annotations:
         checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
     spec:
-{{- if .Values.image.pullSecrets }}
+      {{- if .Values.hostNetwork.enabled }}
+      hostNetwork: true
+      {{- end }}
+      {{- if .Values.image.pullSecrets }}
       imagePullSecrets:
-{{- range .Values.image.pullSecrets }}
+        {{- range .Values.image.pullSecrets }}
         - name: {{ . }}
-{{- end }}
-{{- end }}
+        {{- end }}
+      {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
