@@ -18,10 +18,8 @@ spec:
   selector:
     matchLabels:
       {{- include "gatus.selectorLabels" . | nindent 6 }}
-{{- with .Values.deploymentStrategy }}
   strategy:
-{{ toYaml . | trim | indent 4 }}
-{{- end }}
+    type: {{ .Values.deploymentStrategy }}
   template:
     metadata:
       labels:
