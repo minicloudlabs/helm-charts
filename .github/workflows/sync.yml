@@ -1,0 +1,32 @@
+name: Sync Workflow
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - index.yaml
+      - gatus-*.tgz
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          cp -f README.md ${{ runner.temp }}/README.md
+          cp -f index.yaml ${{ runner.temp }}/index.yaml
+          cp -rf gatus-*.tgz ${{ runner.temp }}/
+      - uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+      - run: |
+          cp -f ${{ runner.temp }}/README.md .
+          cp -f ${{ runner.temp }}/index.yaml .
+          cp -rf ${{ runner.temp }}/gatus-*.tgz .
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git add README.md
+          git add index.yaml
+          git add gatus-*.tgz
+          git commit --signoff -m "Sync artefacts from master"
+          git push
