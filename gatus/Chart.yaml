@@ -4,5 +4,5 @@ version: 1.0.3
 description: Automated service health dashboard
 type: application
 sources:
-  - https://github.com/TwinProduction/gatus
+  - https://github.com/avakarev/gatus-chart
 appVersion: v2.1.0
