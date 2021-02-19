@@ -5,6 +5,10 @@ build:
 	@helm repo index .
 	@echo ">> Done!"
 
+lint:
+	@echo ">> Linting chart..."
+	@helm lint gatus
+
 serve: build
 	@echo ">> Serving helm repo..."
 	@helm serve
