@@ -1,5 +1,6 @@
 # Gatus Helm Chart
 
+[![CI Status](https://img.shields.io/github/workflow/status/avakarev/gatus-chart/Helm%20CI%20Workflow/master?longCache=tru&label=CI%20Status&logo=github%20actions&logoColor=fff)](https://github.com/avakarev/gatus-chart/actions?query=branch%3Amaster+workflow%3A%22Helm+CI+Workflow%22)
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gatus)](https://artifacthub.io/packages/helm/gatus/gatus)
 [![License: MIT](https://img.shields.io/github/license/avakarev/gatus-chart)](https://github.com/avakarev/gatus-chart/blob/master/LICENSE)
 
@@ -37,7 +38,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | Parameter                                 | Description                                   | Default                        |
 |-------------------------------------------|-----------------------------------------------|--------------------------------|
 | `replicas`                                | Number of nodes                               | `1`                            |
-| `deploymentStrategy`                      | Deployment strategy                           | `{ "type": "RollingUpdate" }`  |
+| `deploymentStrategy`                      | Deployment strategy                           | `RollingUpdate`                |
 | `readinessProbe.enabled`                  | Enable readiness probe                        | `true`                         |
 | `livenessProbe.enabled`                   | Enable liveness probe                         | `true`                         |
 | `image.repository`                        | Image repository                              | `twinproduction/gatus`         |
@@ -72,7 +73,7 @@ releases:
   - name: gatus
     namespace: gatus
     chart: gatus/gatus
-    version: 1.0.3
+    version: 1.0.4
     values:
       - config:
           services:
