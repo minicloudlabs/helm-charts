@@ -83,5 +83,9 @@ releases:
                 - '[STATUS] == 200'
 ```
 
+## License
+
+`go-symlink` is licensed under MIT license. (see [LICENSE](./LICENSE))
+
 
 [gatus-config]: https://github.com/TwinProduction/gatus#configuration
