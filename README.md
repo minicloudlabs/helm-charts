@@ -15,23 +15,31 @@ helm repo update
 
 _See [helm repo](https://helm.sh/docs/helm/helm_repo/) for command documentation._
 
-## Installing the Chart
-
-To install the chart with the release name `my-release`:
+## Install Chart
 
 ```console
-helm install my-release gatus/gatus
+helm install --name [RELEASE_NAME] gatus/gatus
 ```
 
-## Uninstalling the Chart
+_See [configuration](#configuration) below._
+_See [helm install](https://helm.sh/docs/helm/helm_install/) for command documentation._
 
-To uninstall/delete the my-release deployment:
+## Uninstall Chart
 
 ```console
-helm delete my-release
+helm delete --purge [RELEASE_NAME]
 ```
 
-The command removes all the Kubernetes components associated with the chart and deletes the release.
+This removes all the Kubernetes components associated with the chart and deletes the release.
+_See [helm uninstall](https://helm.sh/docs/helm/helm_uninstall/) for command documentation._
+
+## Upgrade Chart
+
+```console
+helm upgrade [RELEASE_NAME] gatus --install
+```
+
+_See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documentation._
 
 ## Configuration
 
@@ -61,6 +69,14 @@ The command removes all the Kubernetes components associated with the chart and 
 | `nodeSelector`                            | Node labels for pod assignment                | `{}`                           |
 | `config`                                  | [Gatus configuration][gatus-config]           | `{}`                           |
 
+_See [Customizing the Chart Before Installing](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing)._
+
+To see all configurable options with detailed comments, visit the chart's [values.yaml](./gatus/values.yaml), or run
+
+```console
+helm inspect values gatus/gatus
+```
+
 ### `helmfile.yaml` example
 
 ```yaml
@@ -82,6 +98,10 @@ releases:
               conditions:
                 - '[STATUS] == 200'
 ```
+
+## License
+
+`go-symlink` is licensed under MIT license. (see [LICENSE](./LICENSE))
 
 
 [gatus-config]: https://github.com/TwinProduction/gatus#configuration
