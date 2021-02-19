@@ -1,5 +1,6 @@
 # Gatus Helm Chart
 
+[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gatus)](https://artifacthub.io/packages/helm/gatus/gatus)
 * Installs the automated service health dashboard [Gatus](https://github.com/TwinProduction/gatus)
 
 ## Get Repo Info
