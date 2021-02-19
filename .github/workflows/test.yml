@@ -1,8 +1,8 @@
-name: Helm CI Workflow
+name: Test Workflow
 on: [push]
 jobs:
-  ci:
-    name: Run CI on Helm ${{ matrix.helm }}
+  test:
+    name: Test with helm@${{ matrix.helm }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
