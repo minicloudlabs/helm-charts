@@ -6,9 +6,11 @@ entries:
     created: "2021-02-18T03:17:51.714203+01:00"
     description: Automated service health dashboard
     digest: 7aa5dc3b41d04faf4dabb47ff43647ba8415201532fd727e2a16b52c92837e87
+    maintainers:
+    - name: avakarev
     name: gatus
     sources:
-    - https://github.com/TwinProduction/gatus
+    - https://github.com/avakarev/gatus-chart
     urls:
     - gatus-1.0.3.tgz
     version: 1.0.3
@@ -17,9 +19,11 @@ entries:
     created: "2021-02-18T00:49:50.160903+01:00"
     description: Automated service health dashboard
     digest: 04c8c76ad220f4e61d50b0ef410c2e7370524d9259d8c732a01d6c5d4038b0f2
+    maintainers:
+    - name: avakarev
     name: gatus
     sources:
-    - https://github.com/TwinProduction/gatus
+    - https://github.com/avakarev/gatus-chart
     urls:
     - gatus-1.0.2.tgz
     version: 1.0.2
@@ -39,9 +43,11 @@ entries:
     created: "2021-02-17T22:33:57.459264+01:00"
     description: Automated service health dashboard
     digest: 2b7cf0390ee819b6ce859041db9f3b8a87ab7ac8931239230adf4eb0dde3bd75
+    maintainers:
+    - name: avakarev
     name: gatus
     sources:
-    - https://github.com/TwinProduction/gatus
+    - https://github.com/avakarev/gatus-chart
     urls:
     - gatus-1.0.0.tgz
     version: 1.0.0
