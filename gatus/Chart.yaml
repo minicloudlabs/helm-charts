@@ -8,3 +8,4 @@ sources:
   - https://github.com/avakarev/gatus-chart
 maintainers:
   - name: avakarev
+keywords: ['gatus', 'healthcheck', 'uptime', 'monitoring']
