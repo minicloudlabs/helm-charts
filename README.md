@@ -37,7 +37,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | Parameter                                 | Description                                   | Default                        |
 |-------------------------------------------|-----------------------------------------------|--------------------------------|
 | `replicas`                                | Number of nodes                               | `1`                            |
-| `deploymentStrategy`                      | Deployment strategy                           | `{ "type": "RollingUpdate" }`  |
+| `deploymentStrategy`                      | Deployment strategy                           | `RollingUpdate`                |
 | `readinessProbe.enabled`                  | Enable readiness probe                        | `true`                         |
 | `livenessProbe.enabled`                   | Enable liveness probe                         | `true`                         |
 | `image.repository`                        | Image repository                              | `twinproduction/gatus`         |

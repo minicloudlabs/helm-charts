@@ -4,8 +4,7 @@ revisionHistoryLimit: 3
 
 # See `kubectl explain deployment.spec.strategy` for more
 # ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
-deploymentStrategy:
-  type: RollingUpdate
+deploymentStrategy: RollingUpdate
 
 readinessProbe:
   enabled: true
