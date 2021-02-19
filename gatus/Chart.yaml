@@ -3,6 +3,8 @@ name: gatus
 version: 1.0.3
 description: Automated service health dashboard
 type: application
+appVersion: v2.1.0
 sources:
   - https://github.com/avakarev/gatus-chart
-appVersion: v2.1.0
+maintainers:
+  - name: avakarev
