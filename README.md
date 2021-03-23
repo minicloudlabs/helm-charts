@@ -50,7 +50,7 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 | `readinessProbe.enabled`                  | Enable readiness probe                        | `true`                         |
 | `livenessProbe.enabled`                   | Enable liveness probe                         | `true`                         |
 | `image.repository`                        | Image repository                              | `twinproduction/gatus`         |
-| `image.tag`                               | Image tag                                     | `v2.1.0`                       |
+| `image.tag`                               | Image tag                                     | `v2.3.0`                       |
 | `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                 |
 | `image.pullSecrets`                       | Image pull secrets                            | `{}`                           |
 | `hostNetwork.enabled`                     | Enable host network mode                      | `false`                        |
