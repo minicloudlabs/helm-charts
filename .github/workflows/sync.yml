@@ -2,7 +2,7 @@ name: Sync Workflow
 on:
   push:
     branches:
-      - master
+      - release
     paths:
       - README.md
       - index.yaml
