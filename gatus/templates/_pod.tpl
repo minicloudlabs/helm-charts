@@ -8,8 +8,12 @@ imagePullSecrets:
   - name: {{ . }}
   {{- end }}
 {{- end }}
+securityContext:
+  {{- toYaml .Values.podSecurityContext | nindent 8 }}
 containers:
   - name: {{ .Chart.Name }}
+    securityContext:
+      {{- toYaml .Values.securityContext | nindent 12 }}
     image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
     imagePullPolicy: {{ .Values.image.pullPolicy }}
     ports:

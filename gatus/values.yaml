@@ -18,6 +18,14 @@ image:
 hostNetwork:
   enabled: false
 
+podSecurityContext:
+  fsGroup: 65534
+
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 65534
+  runAsGroup: 65534
+
 # Expose the gatus service to be accessed from outside the cluster (LoadBalancer service)
 # or access it from within the cluster (ClusterIP service). Set the service type and the port to serve it.
 # ref: http://kubernetes.io/docs/user-guide/services/

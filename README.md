@@ -52,6 +52,9 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 | `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                 |
 | `image.pullSecrets`                       | Image pull secrets                            | `{}`                           |
 | `hostNetwork.enabled`                     | Enable host network mode                      | `false`                        |
+| `podSecurityContext.fsGroup`              | Pod volume's ownership GID                    | `65534`                        |
+| `securityContext.runAsUser`               | Container processes' user id                  | `65534`                        |
+| `securityContext.runAsGroup`              | Container processes' group id                 | `65534`                        |
 | `service.type`                            | Type of service                               | `ClusterIP`                    |
 | `service.port`                            | Port for kubernetes service                   | `80`                           |
 | `service.annotations`                     | Service annotations                           | `{}`                           |
