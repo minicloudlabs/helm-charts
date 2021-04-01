@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: {{ template "gatus.fullname" . }}
   namespace: {{ template "gatus.namespace" . }}
@@ -13,13 +13,11 @@ metadata:
 {{ toYaml . | indent 4 }}
 {{- end }}
 spec:
-  replicas: {{ .Values.replicas }}
-  revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
+  replicas: 1
   selector:
     matchLabels:
       {{- include "gatus.selectorLabels" . | nindent 6 }}
-  strategy:
-    type: {{ .Values.deploymentStrategy }}
+  serviceName: {{ template "gatus.fullname" . }}
   template:
     metadata:
       labels:

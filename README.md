@@ -45,8 +45,6 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 
 | Parameter                                 | Description                                   | Default                        |
 |-------------------------------------------|-----------------------------------------------|--------------------------------|
-| `replicas`                                | Number of nodes                               | `1`                            |
-| `deploymentStrategy`                      | Deployment strategy                           | `RollingUpdate`                |
 | `readinessProbe.enabled`                  | Enable readiness probe                        | `true`                         |
 | `livenessProbe.enabled`                   | Enable liveness probe                         | `true`                         |
 | `image.repository`                        | Image repository                              | `twinproduction/gatus`         |
