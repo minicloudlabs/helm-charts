@@ -1,7 +1,3 @@
-replicas: 1
-
-revisionHistoryLimit: 3
-
 # See `kubectl explain deployment.spec.strategy` for more
 # ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
 deploymentStrategy: RollingUpdate
@@ -25,6 +21,14 @@ image:
 
 hostNetwork:
   enabled: false
+
+podSecurityContext:
+  fsGroup: 65534
+
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 65534
+  runAsGroup: 65534
 
 # Expose the gatus service to be accessed from outside the cluster (LoadBalancer service)
 # or access it from within the cluster (ClusterIP service). Set the service type and the port to serve it.
@@ -69,4 +73,18 @@ resources: {}
 # ref: https://kubernetes.io/docs/user-guide/node-selection/
 nodeSelector: {}
 
+# Enable persistence using Persistent Volume Claims
+# ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+persistence:
+  enabled: false
+  accessModes:
+    - ReadWriteOnce
+  size: 200Mi
+  mountPath: /data
+  # existingClaim: ""
+  storage:
+    file: /data/persistent-storage.file
+
+# Gatus configuration
+# ref: https://github.com/TwinProduction/gatus#configuration
 config: {}

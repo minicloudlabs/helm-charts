@@ -2,8 +2,29 @@ apiVersion: v1
 entries:
   gatus:
   - apiVersion: v1
+    appVersion: v2.3.0
+    created: "2021-04-07T15:01:29.592246+02:00"
+    description: Automated service health dashboard
+    digest: ee48956b1dce615c9204987ad32b151f533e855cb65f65ed364760f0a976fdf5
+    home: https://avakarev.github.io/gatus-chart
+    keywords:
+    - gatus
+    - healthcheck
+    - uptime
+    - monitoring
+    maintainers:
+    - name: avakarev
+    name: gatus
+    sources:
+    - https://github.com/avakarev/gatus-chart
+    - https://github.com/TwinProduction/gatus
+    type: application
+    urls:
+    - gatus-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v1
     appVersion: v2.1.0
-    created: "2021-02-19T11:09:29.146372+01:00"
+    created: "2021-04-07T15:01:29.591701+02:00"
     description: Automated service health dashboard
     digest: 629324ac19ca6f5a334e6eb97c38f7b660ae94cc5f95469fb31ec741acc2151e
     keywords:
@@ -21,7 +42,7 @@ entries:
     version: 1.0.4
   - apiVersion: v1
     appVersion: v2.1.0
-    created: "2021-02-19T11:09:29.146023+01:00"
+    created: "2021-04-07T15:01:29.590978+02:00"
     description: Automated service health dashboard
     digest: 0d4cc49844655e3f1529e7d8aec842439a37b32445d27b8e1728461b09dc0e3c
     keywords:
@@ -39,7 +60,7 @@ entries:
     version: 1.0.3
   - apiVersion: v1
     appVersion: v2.1.0
-    created: "2021-02-19T11:09:29.145399+01:00"
+    created: "2021-04-07T15:01:29.590494+02:00"
     description: Automated service health dashboard
     digest: 04c8c76ad220f4e61d50b0ef410c2e7370524d9259d8c732a01d6c5d4038b0f2
     name: gatus
@@ -50,7 +71,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: v2.1.0
-    created: "2021-02-19T11:09:29.144818+01:00"
+    created: "2021-04-07T15:01:29.590077+02:00"
     description: Automated service health dashboard
     digest: 8a5b397b5dfad1c77b1dc4749148b10e886eb18e23059160ea5699f600831f46
     name: gatus
@@ -61,7 +82,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: v2.1.0
-    created: "2021-02-19T11:09:29.144123+01:00"
+    created: "2021-04-07T15:01:29.589465+02:00"
     description: Automated service health dashboard
     digest: 2b7cf0390ee819b6ce859041db9f3b8a87ab7ac8931239230adf4eb0dde3bd75
     name: gatus
@@ -70,4 +91,4 @@ entries:
     urls:
     - gatus-1.0.0.tgz
     version: 1.0.0
-generated: "2021-02-19T11:09:29.142289+01:00"
+generated: "2021-04-07T15:01:29.588217+02:00"
