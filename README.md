@@ -96,7 +96,7 @@ releases:
   - name: gatus
     namespace: gatus
     chart: gatus/gatus
-    version: 1.0.4
+    version: 1.1.0
     values:
       - config:
           services:
