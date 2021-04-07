@@ -43,31 +43,38 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 
 ## Configuration
 
-| Parameter                                 | Description                                   | Default                        |
-|-------------------------------------------|-----------------------------------------------|--------------------------------|
-| `replicas`                                | Number of nodes                               | `1`                            |
-| `deploymentStrategy`                      | Deployment strategy                           | `RollingUpdate`                |
-| `readinessProbe.enabled`                  | Enable readiness probe                        | `true`                         |
-| `livenessProbe.enabled`                   | Enable liveness probe                         | `true`                         |
-| `image.repository`                        | Image repository                              | `twinproduction/gatus`         |
-| `image.tag`                               | Image tag                                     | `v2.1.0`                       |
-| `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                 |
-| `image.pullSecrets`                       | Image pull secrets                            | `{}`                           |
-| `hostNetwork.enabled`                     | Enable host network mode                      | `false`                        |
-| `service.type`                            | Type of service                               | `ClusterIP`                    |
-| `service.port`                            | Port for kubernetes service                   | `80`                           |
-| `service.annotations`                     | Service annotations                           | `{}`                           |
-| `service.labels`                          | Custom labels                                 | `{}`                           |
-| `ingress.enabled`                         | Enables Ingress                               | `false`                        |
-| `ingress.annotations`                     | Ingress annotations (values are templated)    | `{}`                           |
-| `ingress.labels`                          | Custom labels                                 | `{}`                           |
-| `ingress.path`                            | Ingress accepted path                         | `/`                            |
-| `ingress.hosts`                           | Ingress accepted hostnames                    | `["chart-example.local"]`      |
-| `ingress.tls`                             | Ingress TLS configuration                     | `[]`                           |
-| `env`                                     | Extra environment variables passed to pods    | `{}`                           |
-| `resources`                               | CPU/Memory resource requests/limits           | `{}`                           |
-| `nodeSelector`                            | Node labels for pod assignment                | `{}`                           |
-| `config`                                  | [Gatus configuration][gatus-config]           | `{}`                           |
+| Parameter                                 | Description                                   | Default                              |
+|-------------------------------------------|-----------------------------------------------|--------------------------------------|
+| `deploymentStrategy`                      | Deployment strategy                           | `RollingUpdate`                      |
+| `readinessProbe.enabled`                  | Enable readiness probe                        | `true`                               |
+| `livenessProbe.enabled`                   | Enable liveness probe                         | `true`                               |
+| `image.repository`                        | Image repository                              | `twinproduction/gatus`               |
+| `image.tag`                               | Image tag                                     | `v2.4.0`                             |
+| `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                       |
+| `image.pullSecrets`                       | Image pull secrets                            | `{}`                                 |
+| `hostNetwork.enabled`                     | Enable host network mode                      | `false`                              |
+| `podSecurityContext.fsGroup`              | Pod volume's ownership GID                    | `65534`                              |
+| `securityContext.runAsUser`               | Container processes' user id                  | `65534`                              |
+| `securityContext.runAsGroup`              | Container processes' group id                 | `65534`                              |
+| `service.type`                            | Type of service                               | `ClusterIP`                          |
+| `service.port`                            | Port for kubernetes service                   | `80`                                 |
+| `service.annotations`                     | Service annotations                           | `{}`                                 |
+| `service.labels`                          | Custom labels                                 | `{}`                                 |
+| `ingress.enabled`                         | Enables Ingress                               | `false`                              |
+| `ingress.annotations`                     | Ingress annotations (values are templated)    | `{}`                                 |
+| `ingress.labels`                          | Custom labels                                 | `{}`                                 |
+| `ingress.path`                            | Ingress accepted path                         | `/`                                  |
+| `ingress.hosts`                           | Ingress accepted hostnames                    | `["chart-example.local"]`            |
+| `ingress.tls`                             | Ingress TLS configuration                     | `[]`                                 |
+| `env`                                     | Extra environment variables passed to pods    | `{}`                                 |
+| `resources`                               | CPU/Memory resource requests/limits           | `{}`                                 |
+| `nodeSelector`                            | Node labels for pod assignment                | `{}`                                 |
+| `persistence.enabled`                     | Use persistent volume to store data           | `false`                              |
+| `persistence.accessModes`                 | Persistence access modes                      | `[ReadWriteOnce]`                    |
+| `persistence.size`                        | Size of persistent volume claim               | `50Mi`                               |
+| `persistence.mounthPath`                  | Persistent data volume's mount path           | `/data`                              |
+| `persistence.storage.file`                | File path to persist the data in              | `/data/persistent-storage.file`      |
+| `config`                                  | [Gatus configuration][gatus-config]           | `{}`                                 |
 
 _See [Customizing the Chart Before Installing](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing)._
 
@@ -89,7 +96,7 @@ releases:
   - name: gatus
     namespace: gatus
     chart: gatus/gatus
-    version: 1.0.4
+    version: 1.1.1
     values:
       - config:
           services:
