@@ -4,7 +4,6 @@ on:
     branches:
       - master
     paths:
-      - README.md
       - index.yaml
       - gatus-*.tgz
 jobs:
