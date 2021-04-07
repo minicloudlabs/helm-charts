@@ -2,9 +2,8 @@ name: Sync Workflow
 on:
   push:
     branches:
-      - release
+      - master
     paths:
-      - README.md
       - index.yaml
       - gatus-*.tgz
 jobs:
