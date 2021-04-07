@@ -1,0 +1,6 @@
+{{- if not .Values.persistence.enabled }}
+#################################################################################
+######   WARNING: Persistence is disabled!!! Gatus keeps data in memory and #####
+######            it will loose it when pod is terminated.                  #####
+#################################################################################
+{{- end }}

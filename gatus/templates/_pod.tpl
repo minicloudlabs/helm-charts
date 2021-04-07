@@ -51,10 +51,19 @@ containers:
     volumeMounts:
       - name: {{ template "gatus.fullname" . }}-config
         mountPath: /config
+      {{- if .Values.persistence.enabled }}
+      - name: {{ template "gatus.fullname" . }}-data
+        mountPath: {{ .Values.persistence.mountPath }}
+      {{- end }}
 volumes:
   - name: {{ template "gatus.fullname" . }}-config
     configMap:
       name: {{ template "gatus.fullname" . }}
+  {{- if .Values.persistence.enabled }}
+  - name: {{ template "gatus.fullname" . }}-data
+    persistentVolumeClaim:
+      claimName: {{ .Values.persistence.existingClaim | default (include "gatus.fullname" .) }}
+  {{- end }}
 {{- with .Values.nodeSelector }}
 nodeSelector:
 {{ toYaml . | indent 8 }}

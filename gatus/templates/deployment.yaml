@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
   name: {{ template "gatus.fullname" . }}
   namespace: {{ template "gatus.namespace" . }}
@@ -17,7 +17,8 @@ spec:
   selector:
     matchLabels:
       {{- include "gatus.selectorLabels" . | nindent 6 }}
-  serviceName: {{ template "gatus.fullname" . }}
+  strategy:
+    type: {{ .Values.deploymentStrategy }}
   template:
     metadata:
       labels:

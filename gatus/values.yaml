@@ -1,3 +1,7 @@
+# See `kubectl explain deployment.spec.strategy` for more
+# ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
+deploymentStrategy: RollingUpdate
+
 readinessProbe:
   enabled: true
 
@@ -69,4 +73,18 @@ resources: {}
 # ref: https://kubernetes.io/docs/user-guide/node-selection/
 nodeSelector: {}
 
+# Enable persistence using Persistent Volume Claims
+# ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+persistence:
+  enabled: false
+  accessModes:
+    - ReadWriteOnce
+  size: 200Mi
+  mountPath: /data
+  # existingClaim: ""
+  storage:
+    file: /data/persistent-storage.file
+
+# Gatus configuration
+# ref: https://github.com/TwinProduction/gatus#configuration
 config: {}
