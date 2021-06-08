@@ -51,6 +51,7 @@ containers:
     volumeMounts:
       - name: {{ template "gatus.fullname" . }}-config
         mountPath: /config
+        readOnly: true
       {{- if .Values.persistence.enabled }}
       - name: {{ template "gatus.fullname" . }}-data
         mountPath: {{ .Values.persistence.mountPath }}
