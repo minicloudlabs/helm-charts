@@ -108,7 +108,7 @@ releases:
 
 ## License
 
-`go-symlink` is licensed under MIT license. (see [LICENSE](./LICENSE))
+`gatus-chart` is licensed under MIT license. (see [LICENSE](./LICENSE))
 
 
 [gatus-config]: https://github.com/TwinProduction/gatus#configuration
