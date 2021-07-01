@@ -49,7 +49,7 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 | `readinessProbe.enabled`                  | Enable readiness probe                        | `true`                               |
 | `livenessProbe.enabled`                   | Enable liveness probe                         | `true`                               |
 | `image.repository`                        | Image repository                              | `twinproduction/gatus`               |
-| `image.tag`                               | Image tag                                     | `v2.4.6`                             |
+| `image.tag`                               | Image tag                                     | `v2.7.0`                             |
 | `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                       |
 | `image.pullSecrets`                       | Image pull secrets                            | `{}`                                 |
 | `hostNetwork.enabled`                     | Enable host network mode                      | `false`                              |
@@ -96,7 +96,7 @@ releases:
   - name: gatus
     namespace: gatus
     chart: gatus/gatus
-    version: 1.1.2
+    version: 1.1.3
     values:
       - config:
           services:
@@ -108,7 +108,7 @@ releases:
 
 ## License
 
-`go-symlink` is licensed under MIT license. (see [LICENSE](./LICENSE))
+`gatus-chart` is licensed under MIT license. (see [LICENSE](./LICENSE))
 
 
 [gatus-config]: https://github.com/TwinProduction/gatus#configuration
