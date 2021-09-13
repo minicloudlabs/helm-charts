@@ -25,5 +25,8 @@ spec:
         {{- include "gatus.selectorLabels" . | nindent 8 }}
       annotations:
         checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+        {{- with .Values.podAnnotations }}
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
     spec:
       {{- include "gatus.pod" . | nindent 6 }}
