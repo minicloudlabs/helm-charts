@@ -22,6 +22,10 @@ image:
 hostNetwork:
   enabled: false
 
+podAnnotations: {}
+
+podLabels: {}
+
 podSecurityContext:
   fsGroup: 65534
 
@@ -29,8 +33,6 @@ securityContext:
   runAsNonRoot: true
   runAsUser: 65534
   runAsGroup: 65534
-
-podAnnotations: {}
 
 # Expose the gatus service to be accessed from outside the cluster (LoadBalancer service)
 # or access it from within the cluster (ClusterIP service). Set the service type and the port to serve it.
