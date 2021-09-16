@@ -53,6 +53,8 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 | `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                       |
 | `image.pullSecrets`                       | Image pull secrets                            | `{}`                                 |
 | `hostNetwork.enabled`                     | Enable host network mode                      | `false`                              |
+| `podAnnotations`                          | Pod annotations                               | `{}`                                 |
+| `podLabels`                               | Pod labels                                    | `{}`                                 |
 | `podSecurityContext.fsGroup`              | Pod volume's ownership GID                    | `65534`                              |
 | `securityContext.runAsUser`               | Container processes' user id                  | `65534`                              |
 | `securityContext.runAsGroup`              | Container processes' group id                 | `65534`                              |
@@ -96,7 +98,7 @@ releases:
   - name: gatus
     namespace: gatus
     chart: gatus/gatus
-    version: 1.1.3
+    version: 1.1.4
     values:
       - config:
           services:
