@@ -1,3 +1,5 @@
+HTTP_PORT := 8080
+
 build:
 	@echo ">> Building helm package..."
 	@cp README.md gatus/README.md
@@ -11,5 +13,6 @@ lint:
 	@helm lint gatus
 
 serve: build
-	@echo ">> Serving helm repo..."
-	@helm serve
+	@echo ">> Use 'http://localhost:${HTTP_PORT}' as helmfile's repo url"
+	@echo ">> Serving helm repo at port ${HTTP_PORT}"
+	@python -m SimpleHTTPServer ${HTTP_PORT}
