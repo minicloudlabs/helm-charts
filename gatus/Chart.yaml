@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v2
 name: gatus
 description: Automated service health dashboard
 version: 1.1.4
