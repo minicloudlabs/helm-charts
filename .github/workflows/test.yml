@@ -1,18 +1,14 @@
 name: Test Workflow
 on: [push]
 jobs:
-  test:
-    name: Test with helm@${{ matrix.helm }}
+  lint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        helm: [2.17.0]
     steps:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    - uses: azure/setup-helm@v1
-      with:
-        version: ${{ matrix.helm }}
+    - name: Setup helm
+      uses: azure/setup-helm@v1
+      with: { version: v3.6.3 }
     - name: Lint
       run: make lint
