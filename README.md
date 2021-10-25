@@ -4,7 +4,7 @@
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gatus)](https://artifacthub.io/packages/helm/gatus/gatus)
 [![License: MIT](https://img.shields.io/github/license/avakarev/gatus-chart)](https://github.com/avakarev/gatus-chart/blob/master/LICENSE)
 
-> Installs the automated service health dashboard [Gatus](https://github.com/TwinProduction/gatus)
+> Installs the automated service health dashboard [Gatus](https://github.com/TwiN/gatus)
 
 ## Get Repo Info
 
@@ -113,4 +113,4 @@ releases:
 `gatus-chart` is licensed under MIT license. (see [LICENSE](./LICENSE))
 
 
-[gatus-config]: https://github.com/TwinProduction/gatus#configuration
+[gatus-config]: https://github.com/TwiN/gatus#configuration

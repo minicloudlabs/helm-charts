@@ -8,7 +8,7 @@ engine: gotpl
 home: https://avakarev.github.io/gatus-chart
 sources:
   - https://github.com/avakarev/gatus-chart
-  - https://github.com/TwinProduction/gatus
+  - https://github.com/TwiN/gatus
 maintainers:
   - name: avakarev
 keywords: ['gatus', 'healthcheck', 'uptime', 'monitoring']
