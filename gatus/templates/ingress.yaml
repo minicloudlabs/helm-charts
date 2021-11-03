@@ -2,7 +2,7 @@
 {{- $fullName := include "gatus.fullname" . -}}
 {{- $servicePort := .Values.service.port -}}
 {{- $ingressPath := .Values.ingress.path -}}
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: {{ include "gatus.ingress.apiVersion" . }}
 kind: Ingress
 metadata:
   name: {{ $fullName }}

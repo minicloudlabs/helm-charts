@@ -45,3 +45,18 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 app.kubernetes.io/name: {{ include "gatus.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
+
+{{/*
+Return the appropriate apiVersion for ingress
+*/}}
+{{- define "gatus.ingress.apiVersion" -}}
+{{- if .Values.apiVersionOverrides.ingress -}}
+{{- print .Values.apiVersionOverrides.ingress -}}
+{{- else if semverCompare "<1.14-0" (include "gatus.kubeVersion" $) -}}
+{{- print "extensions/v1beta1" -}}
+{{- else if semverCompare "<1.19-0" (include "gatus.kubeVersion" $) -}}
+{{- print "networking.k8s.io/v1beta1" -}}
+{{- else -}}
+{{- print "networking.k8s.io/v1" -}}
+{{- end -}}
+{{- end -}}
