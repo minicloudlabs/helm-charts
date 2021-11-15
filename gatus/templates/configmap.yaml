@@ -7,7 +7,4 @@ metadata:
     {{- include "gatus.labels" . | nindent 4 }}
 data:
   config.yaml: |
-    {{- if .Values.persistence.enabled }}
-    storage: {{- toYaml .Values.persistence.storage | nindent 6 }}
-    {{- end }}
     {{- toYaml .Values.config | nindent 4 }}

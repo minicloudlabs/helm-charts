@@ -10,7 +10,7 @@ livenessProbe:
 
 image:
   repository: twinproduction/gatus
-  tag: v2.7.0
+  tag: v3.3.0
   pullPolicy: IfNotPresent
 
   # Optionally specify an array of imagePullSecrets.
@@ -81,13 +81,17 @@ nodeSelector: {}
 # ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
 persistence:
   enabled: false
-  accessModes:
-    - ReadWriteOnce
   size: 200Mi
   mountPath: /data
+  # subPath: ""
+  accessModes:
+    - ReadWriteOnce
+  finalizers:
+    - kubernetes.io/pvc-protection
+  # annotations: {}
+  # selectorLabels: {}
   # existingClaim: ""
-  storage:
-    file: /data/persistent-storage.file
+  # storageClassName: default
 
 # Gatus configuration
 # ref: https://github.com/TwiN/gatus#configuration

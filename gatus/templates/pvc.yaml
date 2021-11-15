@@ -10,6 +10,10 @@ metadata:
   annotations:
 {{ toYaml . | indent 4 }}
   {{- end }}
+  {{- with .Values.persistence.finalizers  }}
+  finalizers:
+{{ toYaml . | indent 4 }}
+  {{- end }}
 spec:
   accessModes:
     {{- range .Values.persistence.accessModes }}
@@ -26,4 +30,4 @@ spec:
     matchLabels:
 {{ toYaml . | indent 6 }}
   {{- end }}
-{{- end }}
+{{- end -}}

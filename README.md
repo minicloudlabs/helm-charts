@@ -49,7 +49,7 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 | `readinessProbe.enabled`                  | Enable readiness probe                        | `true`                               |
 | `livenessProbe.enabled`                   | Enable liveness probe                         | `true`                               |
 | `image.repository`                        | Image repository                              | `twinproduction/gatus`               |
-| `image.tag`                               | Image tag                                     | `v2.7.0`                             |
+| `image.tag`                               | Image tag                                     | `v3.3.0`                             |
 | `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                       |
 | `image.pullSecrets`                       | Image pull secrets                            | `{}`                                 |
 | `hostNetwork.enabled`                     | Enable host network mode                      | `false`                              |
@@ -72,10 +72,15 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 | `resources`                               | CPU/Memory resource requests/limits           | `{}`                                 |
 | `nodeSelector`                            | Node labels for pod assignment                | `{}`                                 |
 | `persistence.enabled`                     | Use persistent volume to store data           | `false`                              |
-| `persistence.accessModes`                 | Persistence access modes                      | `[ReadWriteOnce]`                    |
-| `persistence.size`                        | Size of persistent volume claim               | `50Mi`                               |
+| `persistence.size`                        | Size of persistent volume claim               | `200Mi`                              |
 | `persistence.mounthPath`                  | Persistent data volume's mount path           | `/data`                              |
-| `persistence.storage.file`                | File path to persist the data in              | `/data/persistent-storage.file`      |
+| `persistence.subPath`                     | Mount a sub dir of the persistent volume      | `nil`                                |
+| `persistence.accessModes`                 | Persistence access modes                      | `[ReadWriteOnce]`                    |
+| `persistence.finalizers`                  | PersistentVolumeClaim finalizers              | `["kubernetes.io/pvc-protection"]`   |
+| `persistence.annotations`                 | PersistentVolumeClaim annotations             | `{}`                                 |
+| `persistence.selectorLabels`              | PersistentVolumeClaim selector labels         | `{}`                                 |
+| `persistence.existingClaim`               | Use an existing PVC to persist data           | `nil`                                |
+| `persistence.storageClassName`            | Type of persistent volume claim               | `nil`                                |
 | `config`                                  | [Gatus configuration][gatus-config]           | `{}`                                 |
 
 _See [Customizing the Chart Before Installing](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing)._
@@ -100,7 +105,12 @@ releases:
     chart: gatus/gatus
     version: 1.1.4
     values:
+      - persistence:
+          enabled: true
       - config:
+          storage:
+            type: sqlite
+            path: /data/sqlite.db
           services:
             - name: Example
               url: https://example.com

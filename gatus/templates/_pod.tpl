@@ -55,6 +55,9 @@ containers:
       {{- if .Values.persistence.enabled }}
       - name: {{ template "gatus.fullname" . }}-data
         mountPath: {{ .Values.persistence.mountPath }}
+        {{- if .Values.persistence.subPath }}
+        subPath: {{ .Values.persistence.subPath }}
+        {{- end }}
       {{- end }}
 volumes:
   - name: {{ template "gatus.fullname" . }}-config

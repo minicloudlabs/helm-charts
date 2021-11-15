@@ -1,6 +1,6 @@
-{{- if not .Values.persistence.enabled }}
+{{- if and .Values.persistence.enabled (eq .Values.persistence.type "memory") }}
 ###############################################################################
-######   WARNING: Persistence is disabled!!! Gatus keeps data in memory   #####
-######            and it will loose it when pod is terminated.            #####
+######   WARNING: Storage of type `memory` is deprecated.                 #####
+######            See https://github.com/TwiN/gatus/issues/198            #####
 ###############################################################################
 {{- end }}
