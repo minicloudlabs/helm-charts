@@ -54,9 +54,13 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   labels: {}
   path: /
+  # pathType is only for k8s >= 1.1=
+  pathType: Prefix
   hosts:
-    - host: chart-example.local
-  # Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
+    - chart-example.local
+  # Extra paths to prepend to every host configuration, requires `ingress.hosts` to have one or more host entries.
+  # Useful when configuring [custom actions with AWS ALB Ingress Controller](https://kubernetes-sigs.github.io/aws-alb-ingress-controller/guide/ingress/annotation/#actions).
+  extraPaths: []
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

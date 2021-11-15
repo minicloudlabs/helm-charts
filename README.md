@@ -66,6 +66,8 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 | `ingress.annotations`                     | Ingress annotations (values are templated)    | `{}`                                 |
 | `ingress.labels`                          | Custom labels                                 | `{}`                                 |
 | `ingress.path`                            | Ingress accepted path                         | `/`                                  |
+| `ingress.pathType`                        | Ingress type of path                          | `Prefix`                             |
+| `ingress.extraPaths`                      | Ingress extra paths to prepend to every host  | `[]`                                 |
 | `ingress.hosts`                           | Ingress accepted hostnames                    | `["chart-example.local"]`            |
 | `ingress.tls`                             | Ingress TLS configuration                     | `[]`                                 |
 | `env`                                     | Extra environment variables passed to pods    | `{}`                                 |
