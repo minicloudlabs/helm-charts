@@ -1,6 +1,0 @@
-{{- if and .Values.persistence.enabled (eq .Values.persistence.type "memory") }}
-###############################################################################
-######   WARNING: Storage of type `memory` is deprecated.                 #####
-######            See https://github.com/TwiN/gatus/issues/198            #####
-###############################################################################
-{{- end }}
