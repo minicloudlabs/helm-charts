@@ -4,7 +4,7 @@
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gatus)](https://artifacthub.io/packages/helm/gatus/gatus)
 [![License: MIT](https://img.shields.io/github/license/avakarev/gatus-chart)](https://github.com/avakarev/gatus-chart/blob/master/LICENSE)
 
-> Installs the automated service health dashboard [Gatus](https://github.com/TwinProduction/gatus)
+> Installs the automated service health dashboard [Gatus](https://github.com/TwiN/gatus)
 
 ## Get Repo Info
 
@@ -33,13 +33,13 @@ helm delete --purge [RELEASE_NAME]
 This removes all the Kubernetes components associated with the chart and deletes the release.
 _See [helm uninstall](https://helm.sh/docs/helm/helm_uninstall/) for command documentation._
 
-## Upgrade Chart
+## Upgrading an existing Release to a new major version
 
-```console
-helm upgrade [RELEASE_NAME] gatus --install
-```
+### To 2.0.0
 
-_See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documentation._
+This version requires Helm >= 3
+Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of storage, supports `sqlite` and `postgres`.
+`storage` is not part of `persistence` anymore and is part of `config` now. Check the example below.
 
 ## Configuration
 
@@ -49,7 +49,7 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 | `readinessProbe.enabled`                  | Enable readiness probe                        | `true`                               |
 | `livenessProbe.enabled`                   | Enable liveness probe                         | `true`                               |
 | `image.repository`                        | Image repository                              | `twinproduction/gatus`               |
-| `image.tag`                               | Image tag                                     | `v2.7.0`                             |
+| `image.tag`                               | Image tag                                     | `v3.3.0`                             |
 | `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                       |
 | `image.pullSecrets`                       | Image pull secrets                            | `{}`                                 |
 | `hostNetwork.enabled`                     | Enable host network mode                      | `false`                              |
@@ -66,16 +66,23 @@ _See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documen
 | `ingress.annotations`                     | Ingress annotations (values are templated)    | `{}`                                 |
 | `ingress.labels`                          | Custom labels                                 | `{}`                                 |
 | `ingress.path`                            | Ingress accepted path                         | `/`                                  |
+| `ingress.pathType`                        | Ingress type of path                          | `Prefix`                             |
+| `ingress.extraPaths`                      | Ingress extra paths to prepend to every host  | `[]`                                 |
 | `ingress.hosts`                           | Ingress accepted hostnames                    | `["chart-example.local"]`            |
 | `ingress.tls`                             | Ingress TLS configuration                     | `[]`                                 |
 | `env`                                     | Extra environment variables passed to pods    | `{}`                                 |
 | `resources`                               | CPU/Memory resource requests/limits           | `{}`                                 |
 | `nodeSelector`                            | Node labels for pod assignment                | `{}`                                 |
 | `persistence.enabled`                     | Use persistent volume to store data           | `false`                              |
-| `persistence.accessModes`                 | Persistence access modes                      | `[ReadWriteOnce]`                    |
-| `persistence.size`                        | Size of persistent volume claim               | `50Mi`                               |
+| `persistence.size`                        | Size of persistent volume claim               | `200Mi`                              |
 | `persistence.mounthPath`                  | Persistent data volume's mount path           | `/data`                              |
-| `persistence.storage.file`                | File path to persist the data in              | `/data/persistent-storage.file`      |
+| `persistence.subPath`                     | Mount a sub dir of the persistent volume      | `nil`                                |
+| `persistence.accessModes`                 | Persistence access modes                      | `[ReadWriteOnce]`                    |
+| `persistence.finalizers`                  | PersistentVolumeClaim finalizers              | `["kubernetes.io/pvc-protection"]`   |
+| `persistence.annotations`                 | PersistentVolumeClaim annotations             | `{}`                                 |
+| `persistence.selectorLabels`              | PersistentVolumeClaim selector labels         | `{}`                                 |
+| `persistence.existingClaim`               | Use an existing PVC to persist data           | `nil`                                |
+| `persistence.storageClassName`            | Type of persistent volume claim               | `nil`                                |
 | `config`                                  | [Gatus configuration][gatus-config]           | `{}`                                 |
 
 _See [Customizing the Chart Before Installing](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing)._
@@ -98,10 +105,15 @@ releases:
   - name: gatus
     namespace: gatus
     chart: gatus/gatus
-    version: 1.1.4
+    version: 2.0.0
     values:
+      - persistence:
+          enabled: true
       - config:
-          services:
+          storage:
+            type: sqlite
+            file: /data/data.db
+          endpoints:
             - name: Example
               url: https://example.com
               conditions:
@@ -113,4 +125,4 @@ releases:
 `gatus-chart` is licensed under MIT license. (see [LICENSE](./LICENSE))
 
 
-[gatus-config]: https://github.com/TwinProduction/gatus#configuration
+[gatus-config]: https://github.com/TwiN/gatus#configuration
