@@ -2,8 +2,29 @@ apiVersion: v1
 entries:
   gatus:
   - apiVersion: v2
+    appVersion: v3.5.0
+    created: "2022-01-10T01:51:32.991425+01:00"
+    description: Automated service health dashboard
+    digest: 7d12cc8a5f54cce330c5d3b2e1ca1829616e4af435bc4c0b1f2a2c97bda04149
+    home: https://avakarev.github.io/gatus-chart
+    keywords:
+    - gatus
+    - healthcheck
+    - uptime
+    - monitoring
+    maintainers:
+    - name: avakarev
+    name: gatus
+    sources:
+    - https://github.com/avakarev/gatus-chart
+    - https://github.com/TwiN/gatus
+    type: application
+    urls:
+    - gatus-2.0.2.tgz
+    version: 2.0.2
+  - apiVersion: v2
     appVersion: v3.4.0
-    created: "2021-12-03T17:41:56.990762+01:00"
+    created: "2022-01-10T01:51:32.990671+01:00"
     description: Automated service health dashboard
     digest: 7d1020ef7d1596e82d22c573312a2caee25edc297620e80ec986148a5fe9c963
     home: https://avakarev.github.io/gatus-chart
@@ -24,7 +45,7 @@ entries:
     version: 2.0.1
   - apiVersion: v2
     appVersion: v3.3.0
-    created: "2021-12-03T17:41:56.989917+01:00"
+    created: "2022-01-10T01:51:32.989647+01:00"
     description: Automated service health dashboard
     digest: e798417720741c8acd605fe8908335c7e06f5f5c37b9d6fd1e02d9ad80e80ba5
     home: https://avakarev.github.io/gatus-chart
@@ -45,7 +66,7 @@ entries:
     version: 2.0.0
   - apiVersion: v1
     appVersion: v2.7.0
-    created: "2021-12-03T17:41:56.988612+01:00"
+    created: "2022-01-10T01:51:32.988512+01:00"
     description: Automated service health dashboard
     digest: 7685b2cb5bd7e00f73920395e547c52f59178791c85030645c1aca930b96c54f
     home: https://avakarev.github.io/gatus-chart
@@ -66,7 +87,7 @@ entries:
     version: 1.1.4
   - apiVersion: v1
     appVersion: v2.7.0
-    created: "2021-12-03T17:41:56.98756+01:00"
+    created: "2022-01-10T01:51:32.987257+01:00"
     description: Automated service health dashboard
     digest: 7199ae2c14e70eda8f1b44d2c4d68c52563f69c03264768b37f31d81d2cf8483
     home: https://avakarev.github.io/gatus-chart
@@ -87,7 +108,7 @@ entries:
     version: 1.1.3
   - apiVersion: v1
     appVersion: v2.6.0
-    created: "2021-12-03T17:41:56.986355+01:00"
+    created: "2022-01-10T01:51:32.986074+01:00"
     description: Automated service health dashboard
     digest: e9edbd4da61f33906506a0f8e46f8d9410009b8f83c713d7ddfe52bf5b909aee
     home: https://avakarev.github.io/gatus-chart
@@ -108,7 +129,7 @@ entries:
     version: 1.1.2
   - apiVersion: v1
     appVersion: v2.4.0
-    created: "2021-12-03T17:41:56.985258+01:00"
+    created: "2022-01-10T01:51:32.985124+01:00"
     description: Automated service health dashboard
     digest: fcd7b4e1051925eb51ac15faa9c85f820c5656dc9dde7cd412795e40f3b2d576
     home: https://avakarev.github.io/gatus-chart
@@ -129,7 +150,7 @@ entries:
     version: 1.1.1
   - apiVersion: v1
     appVersion: v2.3.0
-    created: "2021-12-03T17:41:56.983948+01:00"
+    created: "2022-01-10T01:51:32.969284+01:00"
     description: Automated service health dashboard
     digest: ee48956b1dce615c9204987ad32b151f533e855cb65f65ed364760f0a976fdf5
     home: https://avakarev.github.io/gatus-chart
@@ -150,7 +171,7 @@ entries:
     version: 1.1.0
   - apiVersion: v1
     appVersion: v2.1.0
-    created: "2021-12-03T17:41:56.981281+01:00"
+    created: "2022-01-10T01:51:32.96712+01:00"
     description: Automated service health dashboard
     digest: 629324ac19ca6f5a334e6eb97c38f7b660ae94cc5f95469fb31ec741acc2151e
     keywords:
@@ -168,7 +189,7 @@ entries:
     version: 1.0.4
   - apiVersion: v1
     appVersion: v2.1.0
-    created: "2021-12-03T17:41:56.980205+01:00"
+    created: "2022-01-10T01:51:32.965964+01:00"
     description: Automated service health dashboard
     digest: 0d4cc49844655e3f1529e7d8aec842439a37b32445d27b8e1728461b09dc0e3c
     keywords:
@@ -186,7 +207,7 @@ entries:
     version: 1.0.3
   - apiVersion: v1
     appVersion: v2.1.0
-    created: "2021-12-03T17:41:56.979484+01:00"
+    created: "2022-01-10T01:51:32.965268+01:00"
     description: Automated service health dashboard
     digest: 04c8c76ad220f4e61d50b0ef410c2e7370524d9259d8c732a01d6c5d4038b0f2
     name: gatus
@@ -197,7 +218,7 @@ entries:
     version: 1.0.2
   - apiVersion: v1
     appVersion: v2.1.0
-    created: "2021-12-03T17:41:56.978344+01:00"
+    created: "2022-01-10T01:51:32.96446+01:00"
     description: Automated service health dashboard
     digest: 8a5b397b5dfad1c77b1dc4749148b10e886eb18e23059160ea5699f600831f46
     name: gatus
@@ -208,7 +229,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: v2.1.0
-    created: "2021-12-03T17:41:56.97708+01:00"
+    created: "2022-01-10T01:51:32.962295+01:00"
     description: Automated service health dashboard
     digest: 2b7cf0390ee819b6ce859041db9f3b8a87ab7ac8931239230adf4eb0dde3bd75
     name: gatus
@@ -217,4 +238,4 @@ entries:
     urls:
     - gatus-1.0.0.tgz
     version: 1.0.0
-generated: "2021-12-03T17:41:56.975886+01:00"
+generated: "2022-01-10T01:51:32.960547+01:00"
