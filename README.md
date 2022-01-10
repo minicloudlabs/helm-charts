@@ -1,8 +1,8 @@
 # Gatus Helm Chart
 
-[![CI Status](https://img.shields.io/github/workflow/status/avakarev/gatus-chart/Test%20Workflow/master?longCache=tru&label=CI%20Status&logo=github%20actions&logoColor=fff)](https://github.com/avakarev/gatus-chart/actions?query=branch%3Amaster+workflow%3A%22Test+Workflow%22)
+[![CI Status](https://img.shields.io/github/workflow/status/avakarev/gatus-chart/Test%20Workflow/main?longCache=tru&label=CI%20Status&logo=github%20actions&logoColor=fff)](https://github.com/avakarev/gatus-chart/actions?query=branch%3Amain+workflow%3A%22Test+Workflow%22)
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gatus)](https://artifacthub.io/packages/helm/gatus/gatus)
-[![License: MIT](https://img.shields.io/github/license/avakarev/gatus-chart)](https://github.com/avakarev/gatus-chart/blob/master/LICENSE)
+[![License: MIT](https://img.shields.io/github/license/avakarev/gatus-chart)](https://github.com/avakarev/gatus-chart/blob/main/LICENSE)
 
 > Installs the automated service health dashboard [Gatus](https://github.com/TwiN/gatus)
 
@@ -49,7 +49,7 @@ Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of stora
 | `readinessProbe.enabled`                  | Enable readiness probe                        | `true`                               |
 | `livenessProbe.enabled`                   | Enable liveness probe                         | `true`                               |
 | `image.repository`                        | Image repository                              | `twinproduction/gatus`               |
-| `image.tag`                               | Image tag                                     | `v3.4.0`                             |
+| `image.tag`                               | Image tag                                     | `v3.5.0`                             |
 | `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                       |
 | `image.pullSecrets`                       | Image pull secrets                            | `{}`                                 |
 | `hostNetwork.enabled`                     | Enable host network mode                      | `false`                              |
@@ -105,7 +105,7 @@ releases:
   - name: gatus
     namespace: gatus
     chart: gatus/gatus
-    version: 2.0.1
+    version: 2.0.2
     values:
       - persistence:
           enabled: true
