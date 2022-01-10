@@ -2,7 +2,7 @@ name: Sync Workflow
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - index.yaml
       - gatus-*.tgz
@@ -27,5 +27,5 @@ jobs:
           git add README.md
           git add index.yaml
           git add gatus-*.tgz
-          git commit --signoff -m "Sync artefacts from master"
+          git commit --signoff -m "Sync artefacts from main"
           git push
