@@ -2,6 +2,11 @@
 # ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
 deploymentStrategy: RollingUpdate
 
+# additional deployment labels
+# labels: {}
+# additional deployment annotations
+# annotations: {}
+
 readinessProbe:
   enabled: true
 
@@ -68,6 +73,9 @@ ingress:
 
 # Extra environment variables that will be pass onto deployment pods
 env: {}
+
+# Include secret's content in pods environment
+secrets: false
 
 resources: {}
 #  limits:
