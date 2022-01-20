@@ -59,6 +59,12 @@ containers:
         subPath: {{ .Values.persistence.subPath }}
         {{- end }}
       {{- end }}
+      {{- if .Values.hostCACertificates }}
+      - name: etc-ssl
+        mountPath: /etc/ssl
+      - name: etc-pki
+        mountPath: /etc/pki
+      {{- end }}
 volumes:
   - name: {{ template "gatus.fullname" . }}-config
     configMap:
@@ -67,6 +73,16 @@ volumes:
   - name: {{ template "gatus.fullname" . }}-data
     persistentVolumeClaim:
       claimName: {{ .Values.persistence.existingClaim | default (include "gatus.fullname" .) }}
+  {{- end }}
+  {{- if .Values.hostCACertificates }}
+  - name: etc-ssl
+    hostPath:
+      path: /etc/ssl
+      type: Directory
+  - name: etc-pki
+    hostPath:
+      path: /etc/pki
+      type: DirectoryOrCreate
   {{- end }}
 {{- with .Values.nodeSelector }}
 nodeSelector:

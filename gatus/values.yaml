@@ -27,6 +27,9 @@ image:
 hostNetwork:
   enabled: false
 
+# use host trust store in pod
+hostCACertificates: false
+
 podAnnotations: {}
 
 podLabels: {}
