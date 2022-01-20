@@ -53,6 +53,8 @@ Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of stora
 | `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                       |
 | `image.pullSecrets`                       | Image pull secrets                            | `{}`                                 |
 | `hostNetwork.enabled`                     | Enable host network mode                      | `false`                              |
+| `annotations`                             | Deployment annotations                        | `{}`                                 |
+| `labels`                                  | Deployment labels                             | `{}`                                 |
 | `podAnnotations`                          | Pod annotations                               | `{}`                                 |
 | `podLabels`                               | Pod labels                                    | `{}`                                 |
 | `podSecurityContext.fsGroup`              | Pod volume's ownership GID                    | `65534`                              |
@@ -71,6 +73,8 @@ Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of stora
 | `ingress.hosts`                           | Ingress accepted hostnames                    | `["chart-example.local"]`            |
 | `ingress.tls`                             | Ingress TLS configuration                     | `[]`                                 |
 | `env`                                     | Extra environment variables passed to pods    | `{}`                                 |
+| `extraVolumeMounts`                       | Extra volume mounts                           | `[]`                                 |
+| `secrets`                                 | Include secret's content in pod environment   | `false`                              |
 | `resources`                               | CPU/Memory resource requests/limits           | `{}`                                 |
 | `nodeSelector`                            | Node labels for pod assignment                | `{}`                                 |
 | `persistence.enabled`                     | Use persistent volume to store data           | `false`                              |
@@ -105,7 +109,7 @@ releases:
   - name: gatus
     namespace: gatus
     chart: gatus/gatus
-    version: 2.0.2
+    version: 2.1.0
     values:
       - persistence:
           enabled: true
