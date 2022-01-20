@@ -2,11 +2,6 @@
 # ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
 deploymentStrategy: RollingUpdate
 
-# additional deployment labels
-# labels: {}
-# additional deployment annotations
-# annotations: {}
-
 readinessProbe:
   enabled: true
 
@@ -26,6 +21,12 @@ image:
 
 hostNetwork:
   enabled: false
+
+# additional deployment labels
+annotations: {}
+
+# additional deployment annotations
+labels: {}
 
 podAnnotations: {}
 
@@ -73,6 +74,17 @@ ingress:
 
 # Extra environment variables that will be pass onto deployment pods
 env: {}
+
+# Extra volume mounts
+extraVolumeMounts: []
+  # - name: extra-volume-0
+  #   mountPath: /mnt/volume0
+  #   readOnly: true
+  #   existingClaim: volume-claim
+  # - name: extra-volume-1
+  #   mountPath: /mnt/volume1
+  #   readOnly: true
+  #   hostPath: /usr/shared/
 
 # Include secret's content in pods environment
 secrets: false

@@ -59,6 +59,12 @@ containers:
         subPath: {{ .Values.persistence.subPath }}
         {{- end }}
       {{- end }}
+    {{- range .Values.extraVolumeMounts }}
+      - name: {{ .name }}
+        mountPath: {{ .mountPath }}
+        subPath: {{ .subPath | default "" }}
+        readOnly: {{ .readOnly }}
+    {{- end }}
 volumes:
   - name: {{ template "gatus.fullname" . }}-config
     configMap:
@@ -68,6 +74,19 @@ volumes:
     persistentVolumeClaim:
       claimName: {{ .Values.persistence.existingClaim | default (include "gatus.fullname" .) }}
   {{- end }}
+{{- range .Values.extraVolumeMounts }}
+  - name: {{ .name }}
+    {{- if .existingClaim }}
+    persistentVolumeClaim:
+      claimName: {{ .existingClaim }}
+    {{- else if .hostPath }}
+    hostPath:
+      path: {{ .hostPath }}
+      type: {{ .hostPathType | default "" }}
+    {{- else }}
+    emptyDir: {}
+    {{- end }}
+{{- end }}
 {{- with .Values.nodeSelector }}
 nodeSelector:
 {{ toYaml . | indent 8 }}
