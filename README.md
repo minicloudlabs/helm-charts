@@ -62,8 +62,10 @@ Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of stora
 | `serviceAccount.annotations`              | ServiceAccount annotations                      | `{}`                                 |
 | `serviceAccount.autoMount`                | Automount the service account token in the pod  | `false`                              |
 | `podSecurityContext.fsGroup`              | Pod volume's ownership GID                      | `65534`                              |
-| `securityContext.runAsUser`               | Container processes' user id                    | `65534`                              |
-| `securityContext.runAsGroup`              | Container processes' group id                   | `65534`                              |
+| `securityContext.runAsNonRoot`            | Container runs as a non-root user               | `true`                               |
+| `securityContext.runAsUser`               | Container processes' UID to run the entrypoint  | `65534`                              |
+| `securityContext.runAsGroup`              | Container processes' GID to run the entrypoint  | `65534`                              |
+| `securityContext.readOnlyRootFilesystem`  | Container's root filesystem is read-only        | `true`                               |
 | `service.type`                            | Type of service                                 | `ClusterIP`                          |
 | `service.port`                            | Port for kubernetes service                     | `80`                                 |
 | `service.annotations`                     | Service annotations                             | `{}`                                 |
