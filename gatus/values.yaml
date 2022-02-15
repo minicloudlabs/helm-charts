@@ -32,6 +32,12 @@ podAnnotations: {}
 
 podLabels: {}
 
+serviceAccount:
+  create: false
+  name: ""
+  annotations: {}
+  autoMount: false
+
 podSecurityContext:
   fsGroup: 65534
 

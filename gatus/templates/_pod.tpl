@@ -8,6 +8,8 @@ imagePullSecrets:
   - name: {{ . }}
   {{- end }}
 {{- end }}
+serviceAccountName: {{ template "gatus.serviceAccountName" . }}
+automountServiceAccountToken: {{ .Values.serviceAccount.autoMount }}
 securityContext:
   {{- toYaml .Values.podSecurityContext | nindent 8 }}
 containers:

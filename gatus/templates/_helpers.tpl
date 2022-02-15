@@ -71,3 +71,12 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- define "gatus.ingress.supportsPathType" -}}
   {{- or (eq (include "gatus.ingress.isStable" .) "true") (and (eq (include "gatus.ingress.apiVersion" .) "networking.k8s.io/v1beta1") (semverCompare ">= 1.18-0" .Capabilities.KubeVersion.Version)) -}}
 {{- end -}}
+
+
+{{- define "gatus.serviceAccountName" -}}
+  {{- if .Values.serviceAccount.create -}}
+    {{ default (include "gatus.fullname" .) .Values.serviceAccount.name }}
+  {{- else -}}
+    {{ default "default" .Values.serviceAccount.name }}
+  {{- end -}}
+{{- end -}}
