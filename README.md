@@ -43,51 +43,57 @@ Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of stora
 
 ## Configuration
 
-| Parameter                                 | Description                                   | Default                              |
-|-------------------------------------------|-----------------------------------------------|--------------------------------------|
-| `deploymentStrategy`                      | Deployment strategy                           | `RollingUpdate`                      |
-| `readinessProbe.enabled`                  | Enable readiness probe                        | `true`                               |
-| `livenessProbe.enabled`                   | Enable liveness probe                         | `true`                               |
-| `image.repository`                        | Image repository                              | `twinproduction/gatus`               |
-| `image.tag`                               | Image tag                                     | `v3.6.0`                             |
-| `image.pullPolicy`                        | Image pull policy                             | `IfNotPresent`                       |
-| `image.pullSecrets`                       | Image pull secrets                            | `{}`                                 |
-| `hostNetwork.enabled`                     | Enable host network mode                      | `false`                              |
-| `annotations`                             | Deployment annotations                        | `{}`                                 |
-| `labels`                                  | Deployment labels                             | `{}`                                 |
-| `podAnnotations`                          | Pod annotations                               | `{}`                                 |
-| `podLabels`                               | Pod labels                                    | `{}`                                 |
-| `podSecurityContext.fsGroup`              | Pod volume's ownership GID                    | `65534`                              |
-| `securityContext.runAsUser`               | Container processes' user id                  | `65534`                              |
-| `securityContext.runAsGroup`              | Container processes' group id                 | `65534`                              |
-| `service.type`                            | Type of service                               | `ClusterIP`                          |
-| `service.port`                            | Port for kubernetes service                   | `80`                                 |
-| `service.annotations`                     | Service annotations                           | `{}`                                 |
-| `service.labels`                          | Custom labels                                 | `{}`                                 |
-| `ingress.enabled`                         | Enables Ingress                               | `false`                              |
-| `ingress.annotations`                     | Ingress annotations (values are templated)    | `{}`                                 |
-| `ingress.labels`                          | Custom labels                                 | `{}`                                 |
-| `ingress.path`                            | Ingress accepted path                         | `/`                                  |
-| `ingress.pathType`                        | Ingress type of path                          | `Prefix`                             |
-| `ingress.extraPaths`                      | Ingress extra paths to prepend to every host  | `[]`                                 |
-| `ingress.hosts`                           | Ingress accepted hostnames                    | `["chart-example.local"]`            |
-| `ingress.tls`                             | Ingress TLS configuration                     | `[]`                                 |
-| `env`                                     | Extra environment variables passed to pods    | `{}`                                 |
-| `extraVolumeMounts`                       | Extra volume mounts                           | `[]`                                 |
-| `secrets`                                 | Include secret's content in pod environment   | `false`                              |
-| `resources`                               | CPU/Memory resource requests/limits           | `{}`                                 |
-| `nodeSelector`                            | Node labels for pod assignment                | `{}`                                 |
-| `persistence.enabled`                     | Use persistent volume to store data           | `false`                              |
-| `persistence.size`                        | Size of persistent volume claim               | `200Mi`                              |
-| `persistence.mounthPath`                  | Persistent data volume's mount path           | `/data`                              |
-| `persistence.subPath`                     | Mount a sub dir of the persistent volume      | `nil`                                |
-| `persistence.accessModes`                 | Persistence access modes                      | `[ReadWriteOnce]`                    |
-| `persistence.finalizers`                  | PersistentVolumeClaim finalizers              | `["kubernetes.io/pvc-protection"]`   |
-| `persistence.annotations`                 | PersistentVolumeClaim annotations             | `{}`                                 |
-| `persistence.selectorLabels`              | PersistentVolumeClaim selector labels         | `{}`                                 |
-| `persistence.existingClaim`               | Use an existing PVC to persist data           | `nil`                                |
-| `persistence.storageClassName`            | Type of persistent volume claim               | `nil`                                |
-| `config`                                  | [Gatus configuration][gatus-config]           | `{}`                                 |
+| Parameter                                 | Description                                     | Default                              |
+|-------------------------------------------|-------------------------------------------------|--------------------------------------|
+| `deploymentStrategy`                      | Deployment strategy                             | `RollingUpdate`                      |
+| `readinessProbe.enabled`                  | Enable readiness probe                          | `true`                               |
+| `livenessProbe.enabled`                   | Enable liveness probe                           | `true`                               |
+| `image.repository`                        | Image repository                                | `twinproduction/gatus`               |
+| `image.tag`                               | Image tag                                       | `v3.6.0`                             |
+| `image.pullPolicy`                        | Image pull policy                               | `IfNotPresent`                       |
+| `image.pullSecrets`                       | Image pull secrets                              | `{}`                                 |
+| `hostNetwork.enabled`                     | Enable host network mode                        | `false`                              |
+| `annotations`                             | Deployment annotations                          | `{}`                                 |
+| `labels`                                  | Deployment labels                               | `{}`                                 |
+| `podAnnotations`                          | Pod annotations                                 | `{}`                                 |
+| `podLabels`                               | Pod labels                                      | `{}`                                 |
+| `serviceAccount.create`                   | Create service account                          | `false`                              |
+| `serviceAccount.name`                     | Service account name to use                     | ``                                   |
+| `serviceAccount.annotations`              | ServiceAccount annotations                      | `{}`                                 |
+| `serviceAccount.autoMount`                | Automount the service account token in the pod  | `false`                              |
+| `podSecurityContext.fsGroup`              | Pod volume's ownership GID                      | `65534`                              |
+| `securityContext.runAsNonRoot`            | Container runs as a non-root user               | `true`                               |
+| `securityContext.runAsUser`               | Container processes' UID to run the entrypoint  | `65534`                              |
+| `securityContext.runAsGroup`              | Container processes' GID to run the entrypoint  | `65534`                              |
+| `securityContext.readOnlyRootFilesystem`  | Container's root filesystem is read-only        | `true`                               |
+| `service.type`                            | Type of service                                 | `ClusterIP`                          |
+| `service.port`                            | Port for kubernetes service                     | `80`                                 |
+| `service.annotations`                     | Service annotations                             | `{}`                                 |
+| `service.labels`                          | Custom labels                                   | `{}`                                 |
+| `ingress.enabled`                         | Enables Ingress                                 | `false`                              |
+| `ingress.annotations`                     | Ingress annotations (values are templated)      | `{}`                                 |
+| `ingress.labels`                          | Custom labels                                   | `{}`                                 |
+| `ingress.path`                            | Ingress accepted path                           | `/`                                  |
+| `ingress.pathType`                        | Ingress type of path                            | `Prefix`                             |
+| `ingress.extraPaths`                      | Ingress extra paths to prepend to every host    | `[]`                                 |
+| `ingress.hosts`                           | Ingress accepted hostnames                      | `["chart-example.local"]`            |
+| `ingress.tls`                             | Ingress TLS configuration                       | `[]`                                 |
+| `env`                                     | Extra environment variables passed to pods      | `{}`                                 |
+| `extraVolumeMounts`                       | Extra volume mounts                             | `[]`                                 |
+| `secrets`                                 | Include secret's content in pod environment     | `false`                              |
+| `resources`                               | CPU/Memory resource requests/limits             | `{}`                                 |
+| `nodeSelector`                            | Node labels for pod assignment                  | `{}`                                 |
+| `persistence.enabled`                     | Use persistent volume to store data             | `false`                              |
+| `persistence.size`                        | Size of persistent volume claim                 | `200Mi`                              |
+| `persistence.mounthPath`                  | Persistent data volume's mount path             | `/data`                              |
+| `persistence.subPath`                     | Mount a sub dir of the persistent volume        | `nil`                                |
+| `persistence.accessModes`                 | Persistence access modes                        | `[ReadWriteOnce]`                    |
+| `persistence.finalizers`                  | PersistentVolumeClaim finalizers                | `["kubernetes.io/pvc-protection"]`   |
+| `persistence.annotations`                 | PersistentVolumeClaim annotations               | `{}`                                 |
+| `persistence.selectorLabels`              | PersistentVolumeClaim selector labels           | `{}`                                 |
+| `persistence.existingClaim`               | Use an existing PVC to persist data             | `nil`                                |
+| `persistence.storageClassName`            | Type of persistent volume claim                 | `nil`                                |
+| `config`                                  | [Gatus configuration][gatus-config]             | `{}`                                 |
 
 _See [Customizing the Chart Before Installing](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing)._
 
@@ -109,7 +115,7 @@ releases:
   - name: gatus
     namespace: gatus
     chart: gatus/gatus
-    version: 2.1.1
+    version: 2.2.0
     values:
       - persistence:
           enabled: true
