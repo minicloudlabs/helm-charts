@@ -130,7 +130,7 @@ persistence:
 
 serviceMonitor:
   # -- Enable this if you're using https://github.com/coreos/prometheus-operator
-  enabled: true
+  enabled: false
   # -- Namespace to deploy the ServiceMonitor
   namespace: ""
 
