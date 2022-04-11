@@ -23,8 +23,8 @@ hostNetwork:
   enabled: false
 
 ## Additional labels to add to all resources
-customLabels: #{}
-  app: gatus
+customLabels: {}
+  # app: gatus
 
 # additional deployment annotations
 annotations: {}
