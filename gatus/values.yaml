@@ -72,11 +72,11 @@ ingress:
   path: /
   # pathType is only for k8s >= 1.1=
   pathType: Prefix
+  extraPaths: []
   hosts:
     - chart-example.local
   # Extra paths to prepend to every host configuration, requires `ingress.hosts` to have one or more host entries.
   # Useful when configuring [custom actions with AWS ALB Ingress Controller](https://kubernetes-sigs.github.io/aws-alb-ingress-controller/guide/ingress/annotation/#actions).
-  extraPaths: []
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
@@ -128,25 +128,17 @@ persistence:
   # storageClassName: default
 
 serviceMonitor:
-  # -- Enable this if you're using https://github.com/coreos/prometheus-operator
+  # If true, a ServiceMonitor CRD is created for a prometheus operator
+  # https://github.com/coreos/prometheus-operator
   enabled: false
-  # -- Namespace to deploy the ServiceMonitor
-  namespace: ""
-
-  # -- Fallback to the prometheus default unless specified
-  interval: 30s
-
-  # -- Add custom labels to the ServiceMonitor resource
-  additionalLabels: {}
-    # prometheus: kube-prometheus
-
-  honorLabels: false
-
-  # -- Path to scrape metrics
+  # namespace: monitoring  (defaults to use the namespace this chart is deployed to)
+  interval: 1m
   path: /metrics
-  # -- Timeout for scrape metrics request
-  scrapeTimeout: 10s
-
+  scheme: http
+  tlsConfig: {}
+  labels: {}
+  scrapeTimeout: 30s
+  relabelings: []
 
 # Gatus configuration
 # ref: https://github.com/TwiN/gatus#configuration
