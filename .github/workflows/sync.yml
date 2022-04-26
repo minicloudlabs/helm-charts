@@ -10,12 +10,12 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: |
           cp -f README.md ${{ runner.temp }}/README.md
           cp -f index.yaml ${{ runner.temp }}/index.yaml
           cp -rf gatus-*.tgz ${{ runner.temp }}/
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: gh-pages
       - run: |
