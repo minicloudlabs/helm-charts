@@ -22,10 +22,14 @@ image:
 hostNetwork:
   enabled: false
 
-# additional deployment labels
-annotations: {}
+## Additional labels to add to all resources
+customLabels: {}
+  # app: gatus
 
 # additional deployment annotations
+annotations: {}
+
+# additional deployment labels
 labels: {}
 
 podAnnotations: {}
@@ -123,6 +127,27 @@ persistence:
   # selectorLabels: {}
   # existingClaim: ""
   # storageClassName: default
+
+serviceMonitor:
+  # -- Enable this if you're using https://github.com/coreos/prometheus-operator
+  enabled: false
+  # -- Namespace to deploy the ServiceMonitor
+  namespace: ""
+
+  # -- Fallback to the prometheus default unless specified
+  interval: 30s
+
+  # -- Add custom labels to the ServiceMonitor resource
+  additionalLabels: {}
+    # prometheus: kube-prometheus
+
+  honorLabels: false
+
+  # -- Path to scrape metrics
+  path: /metrics
+  # -- Timeout for scrape metrics request
+  scrapeTimeout: 10s
+
 
 # Gatus configuration
 # ref: https://github.com/TwiN/gatus#configuration
