@@ -4,9 +4,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+    - uses: actions/checkout@v3
     - name: Setup helm
       uses: azure/setup-helm@v1
       with: { version: v3.7.2 }
