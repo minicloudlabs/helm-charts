@@ -22,10 +22,6 @@ image:
 hostNetwork:
   enabled: false
 
-## Additional labels to add to all resources
-customLabels: {}
-  # app: gatus
-
 # additional deployment annotations
 annotations: {}
 
@@ -35,6 +31,9 @@ labels: {}
 podAnnotations: {}
 
 podLabels: {}
+
+# Apply extra labels to common labels
+extraLabels: {}
 
 serviceAccount:
   create: false

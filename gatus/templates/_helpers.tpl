@@ -21,6 +21,13 @@
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
+{{- define "gatus.serviceAccountName" -}}
+  {{- if .Values.serviceAccount.create -}}
+    {{ default (include "gatus.fullname" .) .Values.serviceAccount.name }}
+  {{- else -}}
+    {{ default "default" .Values.serviceAccount.name }}
+  {{- end -}}
+{{- end -}}
 
 {{- define "gatus.namespace" -}}
   {{- if .Values.namespaceOverride -}}
@@ -30,7 +37,6 @@
   {{- end -}}
 {{- end -}}
 
-
 {{- define "gatus.labels" -}}
 helm.sh/chart: {{ include "gatus.chart" . }}
 {{ include "gatus.selectorLabels" . }}
@@ -38,17 +44,15 @@ helm.sh/chart: {{ include "gatus.chart" . }}
 app.kubernetes.io/version: {{ .Values.image.tag | default .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
-{{- if .Values.customLabels }}
-{{ toYaml .Values.customLabels }}
+{{- if .Values.extraLabels }}
+{{ toYaml .Values.extraLabels }}
 {{- end }}
 {{- end -}}
-
 
 {{- define "gatus.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "gatus.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
-
 
 {{- define "gatus.ingress.apiVersion" -}}
   {{- if and (.Capabilities.APIVersions.Has "networking.k8s.io/v1") (semverCompare ">= 1.19-0" .Capabilities.KubeVersion.Version) -}}
@@ -60,26 +64,14 @@ app.kubernetes.io/instance: {{ .Release.Name }}
   {{- end -}}
 {{- end -}}
 
-
 {{- define "gatus.ingress.isStable" -}}
   {{- eq (include "gatus.ingress.apiVersion" .) "networking.k8s.io/v1" -}}
 {{- end -}}
-
 
 {{- define "gatus.ingress.supportsIngressClassName" -}}
   {{- or (eq (include "gatus.ingress.isStable" .) "true") (and (eq (include "gatus.ingress.apiVersion" .) "networking.k8s.io/v1beta1") (semverCompare ">= 1.18-0" .Capabilities.KubeVersion.Version)) -}}
 {{- end -}}
 
-
 {{- define "gatus.ingress.supportsPathType" -}}
   {{- or (eq (include "gatus.ingress.isStable" .) "true") (and (eq (include "gatus.ingress.apiVersion" .) "networking.k8s.io/v1beta1") (semverCompare ">= 1.18-0" .Capabilities.KubeVersion.Version)) -}}
-{{- end -}}
-
-
-{{- define "gatus.serviceAccountName" -}}
-  {{- if .Values.serviceAccount.create -}}
-    {{ default (include "gatus.fullname" .) .Values.serviceAccount.name }}
-  {{- else -}}
-    {{ default "default" .Values.serviceAccount.name }}
-  {{- end -}}
 {{- end -}}

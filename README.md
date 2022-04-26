@@ -57,6 +57,7 @@ Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of stora
 | `labels`                                  | Deployment labels                               | `{}`                                 |
 | `podAnnotations`                          | Pod annotations                                 | `{}`                                 |
 | `podLabels`                               | Pod labels                                      | `{}`                                 |
+| `extraLabels`                             | Extra labels for all manifests                  | `{}`                                 |
 | `serviceAccount.create`                   | Create service account                          | `false`                              |
 | `serviceAccount.name`                     | Service account name to use                     | ``                                   |
 | `serviceAccount.annotations`              | ServiceAccount annotations                      | `{}`                                 |
