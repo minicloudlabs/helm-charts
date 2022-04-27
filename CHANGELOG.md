@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+## [2.2.1] - 2022-04-27
+### Changed
+- Bump Gatus image version v3.7.0 => v3.8.0
+
 ## [2.3.0] - 2022-04-26
 ### Added
 - Support extra labels
@@ -102,7 +106,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial implementation
 
-[Unreleased]: https://github.com/avakarev/gatus-chart/compare/2.3.0...HEAD
+[Unreleased]: https://github.com/avakarev/gatus-chart/compare/2.3.1...HEAD
+[2.3.1]: https://github.com/avakarev/gatus-chart/compare/2.3.0...2.3.1
 [2.3.0]: https://github.com/avakarev/gatus-chart/compare/2.2.1...2.3.0
 [2.2.1]: https://github.com/avakarev/gatus-chart/compare/2.2.0...2.2.1
 [2.2.0]: https://github.com/avakarev/gatus-chart/compare/2.1.1...2.2.0
