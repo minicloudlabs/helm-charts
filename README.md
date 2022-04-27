@@ -132,7 +132,7 @@ releases:
       - config:
           storage:
             type: sqlite
-            file: /data/data.db
+            path: /data/data.db
           endpoints:
             - name: Example
               url: https://example.com
