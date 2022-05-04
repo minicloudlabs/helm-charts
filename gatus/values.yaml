@@ -141,6 +141,16 @@ serviceMonitor:
   scrapeTimeout: 30s
   relabelings: []
 
+## ref: https://kubernetes.io/docs/concepts/services-networking/network-policies/
+networkPolicy:
+  enabled: false
+  ingress:
+    selectors: []
+  # ingress:
+    # selectors:
+      # - namespaceSelector:
+          # matchLabels:
+            # name: nginx-ingress
 # Gatus configuration
 # ref: https://github.com/TwiN/gatus#configuration
 config: {}
