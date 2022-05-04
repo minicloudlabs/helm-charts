@@ -69,6 +69,7 @@ Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of stora
 | `securityContext.readOnlyRootFilesystem`  | Container's root filesystem is read-only        | `true`                              |
 | `service.type`                            | Type of service                                 | `ClusterIP`                         |
 | `service.port`                            | Port for kubernetes service                     | `80`                                |
+| `service.targetPort`                      | Port for container                              | `8080`                              |
 | `service.annotations`                     | Service annotations                             | `{}`                                |
 | `service.labels`                          | Custom labels                                   | `{}`                                |
 | `ingress.enabled`                         | Enables Ingress                                 | `false`                             |

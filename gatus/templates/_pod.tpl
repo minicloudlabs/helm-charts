@@ -20,7 +20,7 @@ containers:
     imagePullPolicy: {{ .Values.image.pullPolicy }}
     ports:
       - name: http
-        containerPort: 8080
+        containerPort: {{ .Values.service.targetPort }}
         protocol: TCP
     {{- if .Values.env }}
     env:
