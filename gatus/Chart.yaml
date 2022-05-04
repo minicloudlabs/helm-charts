@@ -1,7 +1,7 @@
 apiVersion: v2
 name: gatus
 description: Automated service health dashboard
-version: 2.3.1
+version: 2.4.0
 appVersion: v3.8.0
 type: application
 engine: gotpl
