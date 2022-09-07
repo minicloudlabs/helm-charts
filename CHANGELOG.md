@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.5.1] - 2022-06-28
+### Changed
+- Bump Gatus image version v4.0.0 => v4.1.0
 
 ## [2.5.0] - 2022-06-28
 ### Changed
@@ -115,7 +118,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial implementation
 
-[Unreleased]: https://github.com/avakarev/gatus-chart/compare/2.5.0...HEAD
+[Unreleased]: https://github.com/avakarev/gatus-chart/compare/2.5.1...HEAD
+[2.5.1]: https://github.com/avakarev/gatus-chart/compare/2.5.0...2.5.1
 [2.5.0]: https://github.com/avakarev/gatus-chart/compare/2.4.0...2.5.0
 [2.4.0]: https://github.com/avakarev/gatus-chart/compare/2.3.1...2.4.0
 [2.3.1]: https://github.com/avakarev/gatus-chart/compare/2.3.0...2.3.1
