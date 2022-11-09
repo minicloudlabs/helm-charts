@@ -6,11 +6,11 @@ metadata:
   namespace: {{ template "gatus.namespace" . }}
   labels:
     {{- include "gatus.labels" . | nindent 4 }}
-  {{- with .Values.persistence.annotations  }}
+  {{- with .Values.persistence.annotations }}
   annotations:
 {{ toYaml . | indent 4 }}
   {{- end }}
-  {{- with .Values.persistence.finalizers  }}
+  {{- with .Values.persistence.finalizers }}
   finalizers:
 {{ toYaml . | indent 4 }}
   {{- end }}
