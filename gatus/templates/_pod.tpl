@@ -11,11 +11,11 @@ imagePullSecrets:
 serviceAccountName: {{ template "gatus.serviceAccountName" . }}
 automountServiceAccountToken: {{ .Values.serviceAccount.autoMount }}
 securityContext:
-  {{- toYaml .Values.podSecurityContext | nindent 8 }}
+  {{- toYaml .Values.podSecurityContext | nindent 2 }}
 containers:
   - name: {{ .Chart.Name }}
     securityContext:
-      {{- toYaml .Values.securityContext | nindent 12 }}
+      {{- toYaml .Values.securityContext | nindent 6 }}
     image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
     imagePullPolicy: {{ .Values.image.pullPolicy }}
     ports:
@@ -91,6 +91,6 @@ volumes:
 {{- end }}
 {{- with .Values.nodeSelector }}
 nodeSelector:
-{{ toYaml . | indent 8 }}
+{{ toYaml . | indent 2 }}
 {{- end }}
 {{- end }}
