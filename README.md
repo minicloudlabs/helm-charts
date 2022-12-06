@@ -46,6 +46,7 @@ Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of stora
 | Parameter                                 | Description                                     | Default                             |
 |-------------------------------------------|-------------------------------------------------|-------------------------------------|
 | `deployment.strategy`                     | Deployment strategy                             | `RollingUpdate`                     |
+| `deployment.annotateConfigChecksum`       | Restart pod when config changed                 | `true`                              |
 | `readinessProbe.enabled`                  | Enable readiness probe                          | `true`                              |
 | `livenessProbe.enabled`                   | Enable liveness probe                           | `true`                              |
 | `image.repository`                        | Image repository                                | `twinproduction/gatus`              |

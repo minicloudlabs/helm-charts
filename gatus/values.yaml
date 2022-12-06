@@ -2,6 +2,7 @@
 # ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
 deployment:
   strategy: RollingUpdate
+  annotateConfigChecksum: true
 
 readinessProbe:
   enabled: true
