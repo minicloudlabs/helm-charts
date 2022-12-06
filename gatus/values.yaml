@@ -1,6 +1,7 @@
 # See `kubectl explain deployment.spec.strategy` for more
 # ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
-deploymentStrategy: RollingUpdate
+deployment:
+  strategy: RollingUpdate
 
 readinessProbe:
   enabled: true
