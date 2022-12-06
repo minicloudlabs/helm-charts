@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Fixed
 - Fix indentation in pod template spec
+### Changed
+- Bump Gatus image version v4.3.2 => v4.4.0
 
 ## [2.5.5] - 2022-10-27
 ### Changed
