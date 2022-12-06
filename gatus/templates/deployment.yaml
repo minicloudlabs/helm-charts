@@ -18,7 +18,7 @@ spec:
     matchLabels:
       {{- include "gatus.selectorLabels" . | nindent 6 }}
   strategy:
-    type: {{ .Values.deploymentStrategy }}
+    type: {{ .Values.deployment.strategy }}
   template:
     metadata:
       labels:
