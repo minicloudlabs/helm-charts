@@ -9,4 +9,4 @@ jobs:
       uses: azure/setup-helm@v3
       with: { version: v3.10.3 }
     - name: Lint
-      run: make lint
+      run: helm lint charts/gatus
