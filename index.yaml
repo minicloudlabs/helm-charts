@@ -20,7 +20,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.6.0.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.6.0.tgz
     version: 2.6.0
   - apiVersion: v2
     appVersion: v4.3.2
@@ -41,7 +41,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.5.5.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.5.5.tgz
     version: 2.5.5
   - apiVersion: v2
     appVersion: v4.3.1
@@ -62,7 +62,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.5.4.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.5.4.tgz
     version: 2.5.4
   - apiVersion: v2
     appVersion: v4.3.0
@@ -83,7 +83,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.5.3.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.5.3.tgz
     version: 2.5.3
   - apiVersion: v2
     appVersion: v4.2.0
@@ -104,7 +104,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.5.2.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.5.2.tgz
     version: 2.5.2
   - apiVersion: v2
     appVersion: v4.1.0
@@ -125,7 +125,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.5.1.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.5.1.tgz
     version: 2.5.1
   - apiVersion: v2
     appVersion: v4.0.0
@@ -146,7 +146,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.5.0.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.5.0.tgz
     version: 2.5.0
   - apiVersion: v2
     appVersion: v3.8.0
@@ -167,7 +167,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.4.0.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.4.0.tgz
     version: 2.4.0
   - apiVersion: v2
     appVersion: v3.8.0
@@ -188,7 +188,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.3.1.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.3.1.tgz
     version: 2.3.1
   - apiVersion: v2
     appVersion: v3.7.0
@@ -209,7 +209,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.3.0.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.3.0.tgz
     version: 2.3.0
   - apiVersion: v2
     appVersion: v3.7.0
@@ -230,7 +230,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.2.1.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.2.1.tgz
     version: 2.2.1
   - apiVersion: v2
     appVersion: v3.6.0
@@ -251,7 +251,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.2.0.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.2.0.tgz
     version: 2.2.0
   - apiVersion: v2
     appVersion: v3.6.0
@@ -272,7 +272,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.1.1.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.1.1.tgz
     version: 2.1.1
   - apiVersion: v2
     appVersion: v3.5.0
@@ -293,7 +293,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.1.0.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.1.0.tgz
     version: 2.1.0
   - apiVersion: v2
     appVersion: v3.5.0
@@ -314,7 +314,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.0.2.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.0.2.tgz
     version: 2.0.2
   - apiVersion: v2
     appVersion: v3.4.0
@@ -335,7 +335,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.0.1.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.0.1.tgz
     version: 2.0.1
   - apiVersion: v2
     appVersion: v3.3.0
@@ -356,7 +356,7 @@ entries:
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - gatus-2.0.0.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-2.0.0.tgz
     version: 2.0.0
   - apiVersion: v1
     appVersion: v2.7.0
@@ -377,7 +377,7 @@ entries:
     - https://github.com/TwinProduction/gatus
     type: application
     urls:
-    - gatus-1.1.4.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-1.1.4.tgz
     version: 1.1.4
   - apiVersion: v1
     appVersion: v2.7.0
@@ -398,7 +398,7 @@ entries:
     - https://github.com/TwinProduction/gatus
     type: application
     urls:
-    - gatus-1.1.3.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-1.1.3.tgz
     version: 1.1.3
   - apiVersion: v1
     appVersion: v2.6.0
@@ -419,7 +419,7 @@ entries:
     - https://github.com/TwinProduction/gatus
     type: application
     urls:
-    - gatus-1.1.2.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-1.1.2.tgz
     version: 1.1.2
   - apiVersion: v1
     appVersion: v2.4.0
@@ -440,7 +440,7 @@ entries:
     - https://github.com/TwinProduction/gatus
     type: application
     urls:
-    - gatus-1.1.1.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-1.1.1.tgz
     version: 1.1.1
   - apiVersion: v1
     appVersion: v2.3.0
@@ -461,7 +461,7 @@ entries:
     - https://github.com/TwinProduction/gatus
     type: application
     urls:
-    - gatus-1.1.0.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-1.1.0.tgz
     version: 1.1.0
   - apiVersion: v1
     appVersion: v2.1.0
@@ -479,7 +479,7 @@ entries:
     sources:
     - https://github.com/avakarev/gatus-chart
     urls:
-    - gatus-1.0.4.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-1.0.4.tgz
     version: 1.0.4
   - apiVersion: v1
     appVersion: v2.1.0
@@ -497,7 +497,7 @@ entries:
     sources:
     - https://github.com/avakarev/gatus-chart
     urls:
-    - gatus-1.0.3.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-1.0.3.tgz
     version: 1.0.3
   - apiVersion: v1
     appVersion: v2.1.0
@@ -508,7 +508,7 @@ entries:
     sources:
     - https://github.com/TwinProduction/gatus
     urls:
-    - gatus-1.0.2.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-1.0.2.tgz
     version: 1.0.2
   - apiVersion: v1
     appVersion: v2.1.0
@@ -519,7 +519,7 @@ entries:
     sources:
     - https://github.com/TwinProduction/gatus
     urls:
-    - gatus-1.0.1.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v1
     appVersion: v2.1.0
@@ -530,6 +530,6 @@ entries:
     sources:
     - https://github.com/TwinProduction/gatus
     urls:
-    - gatus-1.0.0.tgz
+    - https://avakarev.github.io/gatus-chart/packages/gatus-1.0.0.tgz
     version: 1.0.0
 generated: "2022-12-06T02:22:12.613875+01:00"
