@@ -50,7 +50,7 @@ Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of stora
 | `readinessProbe.enabled`                  | Enable readiness probe                          | `true`                              |
 | `livenessProbe.enabled`                   | Enable liveness probe                           | `true`                              |
 | `image.repository`                        | Image repository                                | `twinproduction/gatus`              |
-| `image.tag`                               | Image tag                                       | `v4.4.0`                            |
+| `image.tag`                               | Image tag                                       | `v5.1.0`                            |
 | `image.pullPolicy`                        | Image pull policy                               | `IfNotPresent`                      |
 | `image.pullSecrets`                       | Image pull secrets                              | `{}`                                |
 | `hostNetwork.enabled`                     | Enable host network mode                        | `false`                             |
@@ -129,7 +129,7 @@ releases:
   - name: gatus
     namespace: gatus
     chart: gatus/gatus
-    version: 2.6.0
+    version: 3.0.0
     values:
       - persistence:
           enabled: true
