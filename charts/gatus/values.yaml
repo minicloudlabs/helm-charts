@@ -12,7 +12,7 @@ livenessProbe:
 
 image:
   repository: twinproduction/gatus
-  tag: v4.4.0
+  tag: v5.1.0
   pullPolicy: IfNotPresent
 
   # Optionally specify an array of imagePullSecrets.
