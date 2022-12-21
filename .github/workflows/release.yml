@@ -2,7 +2,6 @@ on:
   push:
     branches:
       - main
-      - refactor-publishing-pipeline
 
 jobs:
   release:

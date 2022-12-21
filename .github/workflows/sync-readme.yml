@@ -4,6 +4,7 @@ on:
       - main
     paths:
       - README.md
+
 jobs:
   sync:
     runs-on: ubuntu-latest
