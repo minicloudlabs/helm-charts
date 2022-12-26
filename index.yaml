@@ -2,6 +2,27 @@ apiVersion: v1
 entries:
   gatus:
   - apiVersion: v2
+    appVersion: v5.1.1
+    created: "2022-12-26T21:54:12.606862545Z"
+    description: Automated service health dashboard
+    digest: d6cb325c5315e34f16d67cf9c6ea00594e5c93ebe4f720707ed8cdcf7ec1d74f
+    home: https://avakarev.github.io/gatus-chart
+    keywords:
+    - gatus
+    - healthcheck
+    - uptime
+    - monitoring
+    maintainers:
+    - name: avakarev
+    name: gatus
+    sources:
+    - https://github.com/avakarev/gatus-chart
+    - https://github.com/TwiN/gatus
+    type: application
+    urls:
+    - https://github.com/avakarev/gatus-chart/releases/download/gatus-3.0.1/gatus-3.0.1.tgz
+    version: 3.0.1
+  - apiVersion: v2
     appVersion: v5.1.0
     created: "2022-12-21T00:53:03.085257259Z"
     description: Automated service health dashboard
@@ -553,4 +574,4 @@ entries:
     urls:
     - https://avakarev.github.io/gatus-chart/packages/gatus-1.0.0.tgz
     version: 1.0.0
-generated: "2022-12-21T00:53:03.085993709Z"
+generated: "2022-12-26T21:54:12.607114546Z"
