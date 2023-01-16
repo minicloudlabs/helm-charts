@@ -85,12 +85,18 @@ volumes:
     hostPath:
       path: {{ .hostPath }}
       type: {{ .hostPathType | default "" }}
+    {{- else if .existingConfigMap }}
+    configMap:
+      name: {{ .existingConfigMap }}
     {{- else }}
     emptyDir: {}
     {{- end }}
 {{- end }}
 {{- with .Values.nodeSelector }}
 nodeSelector:
+{{ toYaml . | indent 2 }}
+{{- with .Values.tolerations }}
+tolerations:
 {{ toYaml . | indent 2 }}
 {{- end }}
 {{- end }}
