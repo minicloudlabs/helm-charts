@@ -98,6 +98,10 @@ extraVolumeMounts: []
   #   mountPath: /mnt/volume1
   #   readOnly: true
   #   hostPath: /usr/shared/
+  # - name: extra-volume-2
+  #   mountPath: /mnt/volume2
+  #   readOnly: true
+  #   existingConfigMap: config-map
 
 # Include secret's content in pods environment
 secrets: false
@@ -113,6 +117,10 @@ resources: {}
 # Node labels for pod assignment
 # ref: https://kubernetes.io/docs/user-guide/node-selection/
 nodeSelector: {}
+
+# Tolerations for pod assignment
+# ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
+tolerations: {}
 
 # Enable persistence using Persistent Volume Claims
 # ref: http://kubernetes.io/docs/user-guide/persistent-volumes/

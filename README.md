@@ -92,6 +92,7 @@ Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of stora
 | `secrets`                                 | Include secret's content in pod environment     | `false`                             |
 | `resources`                               | CPU/Memory resource requests/limits             | `{}`                                |
 | `nodeSelector`                            | Node labels for pod assignment                  | `{}`                                |
+| `tolerations`                             | Tolerations for pod assignment                  | `{}`                                |
 | `persistence.enabled`                     | Use persistent volume to store data             | `false`                             |
 | `persistence.size`                        | Size of persistent volume claim                 | `200Mi`                             |
 | `persistence.mounthPath`                  | Persistent data volume's mount path             | `/data`                             |
