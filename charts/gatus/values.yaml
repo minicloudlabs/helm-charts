@@ -120,7 +120,7 @@ nodeSelector: {}
 
 # Tolerations for pod assignment
 # ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
-tolerations: {}
+tolerations: []
 
 # Enable persistence using Persistent Volume Claims
 # ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
