@@ -136,7 +136,7 @@ releases:
   - name: gatus
     namespace: gatus
     chart: gatus/gatus
-    version: 3.0.1
+    version: 3.1.0
     values:
       - persistence:
           enabled: true
