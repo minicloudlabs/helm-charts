@@ -95,6 +95,7 @@ volumes:
 {{- with .Values.nodeSelector }}
 nodeSelector:
 {{ toYaml . | indent 2 }}
+{{- end }}
 {{- with .Values.tolerations }}
 tolerations:
 {{ toYaml . | indent 2 }}
