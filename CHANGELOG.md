@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - The values for image.tag is now empty by default and the Chart.yaml appVersion field is used instead
+### Added
+- Add support for image.sha
 
 ## [3.1.0] - 2023-01-22
 ### Added

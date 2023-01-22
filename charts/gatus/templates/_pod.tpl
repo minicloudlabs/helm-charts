@@ -16,7 +16,11 @@ containers:
   - name: {{ .Chart.Name }}
     securityContext:
       {{- toYaml .Values.securityContext | nindent 6 }}
+    {{- if .Values.image.sha }}
+    image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}@sha256:{{ .Values.image.sha }}"
+    {{- else }}
     image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+    {{- end }}
     imagePullPolicy: {{ .Values.image.pullPolicy }}
     ports:
       - name: http
