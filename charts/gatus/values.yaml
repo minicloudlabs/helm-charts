@@ -12,7 +12,8 @@ livenessProbe:
 
 image:
   repository: twinproduction/gatus
-  tag: v5.1.1
+  # if not set, appVersion field from Chart.yaml is used
+  tag: ""
   pullPolicy: IfNotPresent
 
   # Optionally specify an array of imagePullSecrets.
