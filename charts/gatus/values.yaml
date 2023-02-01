@@ -166,3 +166,9 @@ networkPolicy:
 # Gatus configuration
 # ref: https://github.com/TwiN/gatus#configuration
 config: {}
+
+# Add init containers
+initContainers: []
+  # - image: foo
+  #   name: bar
+  #   ...
