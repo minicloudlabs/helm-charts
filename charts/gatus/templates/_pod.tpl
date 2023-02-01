@@ -12,6 +12,10 @@ serviceAccountName: {{ template "gatus.serviceAccountName" . }}
 automountServiceAccountToken: {{ .Values.serviceAccount.autoMount }}
 securityContext:
   {{- toYaml .Values.podSecurityContext | nindent 2 }}
+{{- if .Values.initContainers }}
+initContainers:
+{{- .Values.initContainers | toYaml | nindent 2 }}
+{{- end }}
 containers:
   - name: {{ .Chart.Name }}
     securityContext:
