@@ -124,6 +124,13 @@ nodeSelector: {}
 # ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
 tolerations: []
 
+# Additional init containers (evaluated as template)
+# ref: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
+extraInitContainers: []
+  # - name: initializer
+    # image: busybox:latest
+    # command: ['sh', '-c', 'echo initialize the app before it starts']
+
 # Enable persistence using Persistent Volume Claims
 # ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
 persistence:
@@ -166,9 +173,3 @@ networkPolicy:
 # Gatus configuration
 # ref: https://github.com/TwiN/gatus#configuration
 config: {}
-
-# Add init containers
-initContainers: []
-  # - image: foo
-  #   name: bar
-  #   ...
