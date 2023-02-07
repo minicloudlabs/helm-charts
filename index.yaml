@@ -3,6 +3,28 @@ entries:
   gatus:
   - apiVersion: v2
     appVersion: v5.2.0
+    created: "2023-02-07T23:24:50.848346138Z"
+    description: Automated service health dashboard
+    digest: 5eb7961410e9bc5e49d1acdb2ae55a5a15a837f996b6ef1107eaa4dc2fa9704e
+    home: https://avakarev.github.io/gatus-chart
+    icon: https://raw.githubusercontent.com/TwiN/gatus/a1c8422c2ff2b9d0a6f184c99e4dc728d3f2cd75/web/static/logo-192x192.png
+    keywords:
+    - gatus
+    - healthcheck
+    - uptime
+    - monitoring
+    maintainers:
+    - name: avakarev
+    name: gatus
+    sources:
+    - https://github.com/avakarev/gatus-chart
+    - https://github.com/TwiN/gatus
+    type: application
+    urls:
+    - https://github.com/avakarev/gatus-chart/releases/download/gatus-3.1.3/gatus-3.1.3.tgz
+    version: 3.1.3
+  - apiVersion: v2
+    appVersion: v5.2.0
     created: "2023-01-26T22:31:10.520170454Z"
     description: Automated service health dashboard
     digest: 2da41ef2550a6b74f0b1f7df1690d83a35a20e3197adc45b13038f486835203e
@@ -640,4 +662,4 @@ entries:
     urls:
     - https://avakarev.github.io/gatus-chart/packages/gatus-1.0.0.tgz
     version: 1.0.0
-generated: "2023-01-26T22:31:10.520553578Z"
+generated: "2023-02-07T23:24:50.848837037Z"
