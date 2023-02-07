@@ -116,6 +116,7 @@ Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of stora
 | `networkPolicy.enabled`                   | Enable creation of NetworkPolicy resources      | `false`                             |
 | `networkPolicy.ingress.selectors`         | List of Ingress Rule selectors                  | `[]`                                |
 | `config`                                  | [Gatus configuration][gatus-config]             | `{}`                                |
+| `initContainers`                          | Add init containers to the Pod                  | `[]`                                |
 
 _See [Customizing the Chart Before Installing](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing)._
 
