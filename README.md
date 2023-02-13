@@ -1,7 +1,7 @@
 # Minicloud Labs Kubernetes Helm Charts
 
 [![License: MIT](https://img.shields.io/github/license/minicloudlabs/helm-charts)](https://github.com/minicloudlabs/helm-charts/blob/main/LICENSE)
-[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gatus)](https://artifacthub.io/packages/search?org=minicloudlabs)
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gatus)](https://artifacthub.io/packages/search?org=minicloudlabs)
 
 The code is provided as-is with no warranties.
 
