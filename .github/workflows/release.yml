@@ -1,3 +1,6 @@
+name: Release Charts
+permissions: {}
+
 on:
   push:
     branches:
@@ -5,17 +8,20 @@ on:
 
 jobs:
   release:
+    permissions:
+      contents: write # to push chart release and create a release (helm/chart-releaser-action)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
         with: { fetch-depth: 0 }
       - name: Configure git
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-      - name: Setup helm
+      - name: Install helm
         uses: azure/setup-helm@v3
-        with: { version: v3.10.3 }
+        with: { version: v3.11.1 }
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1
         env:

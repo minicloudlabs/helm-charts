@@ -1,3 +1,6 @@
+name: Sync README.md into gh-pages branch
+permissions: {}
+
 on:
   push:
     branches:
@@ -7,6 +10,8 @@ on:
 
 jobs:
   sync:
+    permissions:
+      contents: write # to make git push
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,12 +19,10 @@ jobs:
           cp -f README.md ${{ runner.temp }}/README.md
       - uses: actions/checkout@v3
         with: { ref: gh-pages }
-      - name: Configure git
-        run: |
-          git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
       - run: |
           cp -f ${{ runner.temp }}/README.md .
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git add README.md
           git commit --signoff -m "Sync README.md from main"
           git push
