@@ -28,7 +28,7 @@ entries:
     created: "2023-02-07T23:24:50.848346138Z"
     description: Automated service health dashboard
     digest: 5eb7961410e9bc5e49d1acdb2ae55a5a15a837f996b6ef1107eaa4dc2fa9704e
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     icon: https://raw.githubusercontent.com/TwiN/gatus/a1c8422c2ff2b9d0a6f184c99e4dc728d3f2cd75/web/static/logo-192x192.png
     keywords:
     - gatus
@@ -39,18 +39,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://github.com/avakarev/gatus-chart/releases/download/gatus-3.1.3/gatus-3.1.3.tgz
+    - https://github.com/minicloudlabs/helm-charts/releases/download/gatus-3.1.3/gatus-3.1.3.tgz
     version: 3.1.3
   - apiVersion: v2
     appVersion: v5.2.0
     created: "2023-01-26T22:31:10.520170454Z"
     description: Automated service health dashboard
     digest: 2da41ef2550a6b74f0b1f7df1690d83a35a20e3197adc45b13038f486835203e
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     icon: https://raw.githubusercontent.com/TwiN/gatus/a1c8422c2ff2b9d0a6f184c99e4dc728d3f2cd75/web/static/logo-192x192.png
     keywords:
     - gatus
@@ -61,18 +61,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://github.com/avakarev/gatus-chart/releases/download/gatus-3.1.2/gatus-3.1.2.tgz
+    - https://github.com/minicloudlabs/helm-charts/releases/download/gatus-3.1.2/gatus-3.1.2.tgz
     version: 3.1.2
   - apiVersion: v2
     appVersion: v5.1.1
     created: "2023-01-22T21:48:00.14982347Z"
     description: Automated service health dashboard
     digest: 3406deb438d4a8d59a2a2211b06975154c3bb13bf375bb77d63d16a6366a93b5
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     icon: https://raw.githubusercontent.com/TwiN/gatus/a1c8422c2ff2b9d0a6f184c99e4dc728d3f2cd75/web/static/logo-192x192.png
     keywords:
     - gatus
@@ -83,18 +83,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://github.com/avakarev/gatus-chart/releases/download/gatus-3.1.1/gatus-3.1.1.tgz
+    - https://github.com/minicloudlabs/helm-charts/releases/download/gatus-3.1.1/gatus-3.1.1.tgz
     version: 3.1.1
   - apiVersion: v2
     appVersion: v5.1.1
     created: "2023-01-22T02:18:18.195255518Z"
     description: Automated service health dashboard
     digest: abed2b0dfa46d131081e33c0d5cfa1a8bcdee55fd3aabed1648933c6094bae35
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     icon: https://raw.githubusercontent.com/TwiN/gatus/a1c8422c2ff2b9d0a6f184c99e4dc728d3f2cd75/web/static/logo-192x192.png
     keywords:
     - gatus
@@ -105,18 +105,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://github.com/avakarev/gatus-chart/releases/download/gatus-3.1.0/gatus-3.1.0.tgz
+    - https://github.com/minicloudlabs/helm-charts/releases/download/gatus-3.1.0/gatus-3.1.0.tgz
     version: 3.1.0
   - apiVersion: v2
     appVersion: v5.1.1
     created: "2022-12-26T21:54:12.606862545Z"
     description: Automated service health dashboard
     digest: d6cb325c5315e34f16d67cf9c6ea00594e5c93ebe4f720707ed8cdcf7ec1d74f
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -126,18 +126,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://github.com/avakarev/gatus-chart/releases/download/gatus-3.0.1/gatus-3.0.1.tgz
+    - https://github.com/minicloudlabs/helm-charts/releases/download/gatus-3.0.1/gatus-3.0.1.tgz
     version: 3.0.1
   - apiVersion: v2
     appVersion: v5.1.0
     created: "2022-12-21T00:53:03.085257259Z"
     description: Automated service health dashboard
     digest: 2ec43e406a879be8e716bb872475e2a994dc2794ac5fa3aa08bfe93ca57ec8e1
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -147,18 +147,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://github.com/avakarev/gatus-chart/releases/download/gatus-3.0.0/gatus-3.0.0.tgz
+    - https://github.com/minicloudlabs/helm-charts/releases/download/gatus-3.0.0/gatus-3.0.0.tgz
     version: 3.0.0
   - apiVersion: v2
     appVersion: v4.4.0
     created: "2022-12-06T02:22:12.638913+01:00"
     description: Automated service health dashboard
     digest: e645c776c9df01ad75fdcee2116b420d7df228051e8d4a40d483e02e71c9ff22
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -168,18 +168,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.6.0.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.6.0.tgz
     version: 2.6.0
   - apiVersion: v2
     appVersion: v4.3.2
     created: "2022-12-06T02:22:12.638385+01:00"
     description: Automated service health dashboard
     digest: d5debd04fda788f86cdb8820db08c656ae271adc652098da4fb64b1325fd03dc
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -189,18 +189,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.5.5.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.5.5.tgz
     version: 2.5.5
   - apiVersion: v2
     appVersion: v4.3.1
     created: "2022-12-06T02:22:12.637582+01:00"
     description: Automated service health dashboard
     digest: e168765567e1ae477cfd0247061dc15d6c337b3891f060a1e2c4179d4d762690
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -210,18 +210,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.5.4.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.5.4.tgz
     version: 2.5.4
   - apiVersion: v2
     appVersion: v4.3.0
     created: "2022-12-06T02:22:12.636134+01:00"
     description: Automated service health dashboard
     digest: 2c5f707c39cc625e676b2d58c8fd88571c11da2723bab6d08e6df8b7943efdb2
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -231,18 +231,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.5.3.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.5.3.tgz
     version: 2.5.3
   - apiVersion: v2
     appVersion: v4.2.0
     created: "2022-12-06T02:22:12.634942+01:00"
     description: Automated service health dashboard
     digest: bea0a8f0661de64ff4c8c545b6605d0ba4202a0569726f9fea6f41f01bf2d109
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -252,18 +252,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.5.2.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.5.2.tgz
     version: 2.5.2
   - apiVersion: v2
     appVersion: v4.1.0
     created: "2022-12-06T02:22:12.633095+01:00"
     description: Automated service health dashboard
     digest: 07e35d30c5bd89854dbbfc12acd8f37dc1d52e27ea9c52df6b4048547058585b
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -273,18 +273,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.5.1.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.5.1.tgz
     version: 2.5.1
   - apiVersion: v2
     appVersion: v4.0.0
     created: "2022-12-06T02:22:12.632335+01:00"
     description: Automated service health dashboard
     digest: 96e543479e595cf0fa87910fb5926639cbe8dad5a243d06ddb7b7527e4f8c2ff
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -294,18 +294,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.5.0.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.5.0.tgz
     version: 2.5.0
   - apiVersion: v2
     appVersion: v3.8.0
     created: "2022-12-06T02:22:12.631442+01:00"
     description: Automated service health dashboard
     digest: 8ec2c81d7c287b01e22fd64a71d8d9a665d762399406314ee23548794cc8bd78
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -315,18 +315,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.4.0.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.4.0.tgz
     version: 2.4.0
   - apiVersion: v2
     appVersion: v3.8.0
     created: "2022-12-06T02:22:12.629536+01:00"
     description: Automated service health dashboard
     digest: 3bb29df945d2d4cef6d8ffb5eb4a072edcd1051e10ee73d9cfb89d0575a10128
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -336,18 +336,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.3.1.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.3.1.tgz
     version: 2.3.1
   - apiVersion: v2
     appVersion: v3.7.0
     created: "2022-12-06T02:22:12.628761+01:00"
     description: Automated service health dashboard
     digest: 2fd254ec911c021565437428f94c1220199ea87a7cb5a9c748a31e429700baf3
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -357,18 +357,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.3.0.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.3.0.tgz
     version: 2.3.0
   - apiVersion: v2
     appVersion: v3.7.0
     created: "2022-12-06T02:22:12.628002+01:00"
     description: Automated service health dashboard
     digest: 5bcd151a165aafc25b700cc104145d7aa9bfb03ed2d4c4fab49c4cdd642f51ce
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -378,18 +378,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.2.1.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.2.1.tgz
     version: 2.2.1
   - apiVersion: v2
     appVersion: v3.6.0
     created: "2022-12-06T02:22:12.627216+01:00"
     description: Automated service health dashboard
     digest: 4ef2bec59c18d05049970f7159113b4a2b0fb54c21b24bcc1055186e9b39031f
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -399,18 +399,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.2.0.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.2.0.tgz
     version: 2.2.0
   - apiVersion: v2
     appVersion: v3.6.0
     created: "2022-12-06T02:22:12.62655+01:00"
     description: Automated service health dashboard
     digest: 92d1f84c751f5d44fa3f8e61487fd8824f048289b7d1013a2a4e7b1a79776405
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -420,18 +420,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.1.1.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.1.1.tgz
     version: 2.1.1
   - apiVersion: v2
     appVersion: v3.5.0
     created: "2022-12-06T02:22:12.625834+01:00"
     description: Automated service health dashboard
     digest: e9afec8394f29afb64b969fd6fe185e43d3f0956d64d3863a6f6408ded5c4369
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -441,18 +441,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.1.0.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.1.0.tgz
     version: 2.1.0
   - apiVersion: v2
     appVersion: v3.5.0
     created: "2022-12-06T02:22:12.624964+01:00"
     description: Automated service health dashboard
     digest: 7d12cc8a5f54cce330c5d3b2e1ca1829616e4af435bc4c0b1f2a2c97bda04149
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -462,18 +462,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.0.2.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.0.2.tgz
     version: 2.0.2
   - apiVersion: v2
     appVersion: v3.4.0
     created: "2022-12-06T02:22:12.6234+01:00"
     description: Automated service health dashboard
     digest: 7d1020ef7d1596e82d22c573312a2caee25edc297620e80ec986148a5fe9c963
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -483,18 +483,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.0.1.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.0.1.tgz
     version: 2.0.1
   - apiVersion: v2
     appVersion: v3.3.0
     created: "2022-12-06T02:22:12.622422+01:00"
     description: Automated service health dashboard
     digest: e798417720741c8acd605fe8908335c7e06f5f5c37b9d6fd1e02d9ad80e80ba5
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -504,18 +504,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwiN/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-2.0.0.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-2.0.0.tgz
     version: 2.0.0
   - apiVersion: v1
     appVersion: v2.7.0
     created: "2022-12-06T02:22:12.621372+01:00"
     description: Automated service health dashboard
     digest: 7685b2cb5bd7e00f73920395e547c52f59178791c85030645c1aca930b96c54f
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -525,18 +525,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwinProduction/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-1.1.4.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-1.1.4.tgz
     version: 1.1.4
   - apiVersion: v1
     appVersion: v2.7.0
     created: "2022-12-06T02:22:12.620318+01:00"
     description: Automated service health dashboard
     digest: 7199ae2c14e70eda8f1b44d2c4d68c52563f69c03264768b37f31d81d2cf8483
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -546,18 +546,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwinProduction/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-1.1.3.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-1.1.3.tgz
     version: 1.1.3
   - apiVersion: v1
     appVersion: v2.6.0
     created: "2022-12-06T02:22:12.619522+01:00"
     description: Automated service health dashboard
     digest: e9edbd4da61f33906506a0f8e46f8d9410009b8f83c713d7ddfe52bf5b909aee
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -567,18 +567,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwinProduction/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-1.1.2.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-1.1.2.tgz
     version: 1.1.2
   - apiVersion: v1
     appVersion: v2.4.0
     created: "2022-12-06T02:22:12.618703+01:00"
     description: Automated service health dashboard
     digest: fcd7b4e1051925eb51ac15faa9c85f820c5656dc9dde7cd412795e40f3b2d576
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -588,18 +588,18 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwinProduction/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-1.1.1.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-1.1.1.tgz
     version: 1.1.1
   - apiVersion: v1
     appVersion: v2.3.0
     created: "2022-12-06T02:22:12.617554+01:00"
     description: Automated service health dashboard
     digest: ee48956b1dce615c9204987ad32b151f533e855cb65f65ed364760f0a976fdf5
-    home: https://avakarev.github.io/gatus-chart
+    home: https://minicloudlabs.github.io/helm-charts
     keywords:
     - gatus
     - healthcheck
@@ -609,11 +609,11 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     - https://github.com/TwinProduction/gatus
     type: application
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-1.1.0.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-1.1.0.tgz
     version: 1.1.0
   - apiVersion: v1
     appVersion: v2.1.0
@@ -629,9 +629,9 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-1.0.4.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-1.0.4.tgz
     version: 1.0.4
   - apiVersion: v1
     appVersion: v2.1.0
@@ -647,9 +647,9 @@ entries:
     - name: avakarev
     name: gatus
     sources:
-    - https://github.com/avakarev/gatus-chart
+    - https://github.com/minicloudlabs/helm-charts
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-1.0.3.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-1.0.3.tgz
     version: 1.0.3
   - apiVersion: v1
     appVersion: v2.1.0
@@ -660,7 +660,7 @@ entries:
     sources:
     - https://github.com/TwinProduction/gatus
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-1.0.2.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-1.0.2.tgz
     version: 1.0.2
   - apiVersion: v1
     appVersion: v2.1.0
@@ -671,7 +671,7 @@ entries:
     sources:
     - https://github.com/TwinProduction/gatus
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-1.0.1.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v1
     appVersion: v2.1.0
@@ -682,6 +682,6 @@ entries:
     sources:
     - https://github.com/TwinProduction/gatus
     urls:
-    - https://avakarev.github.io/gatus-chart/packages/gatus-1.0.0.tgz
+    - https://minicloudlabs.github.io/helm-charts/packages/gatus-1.0.0.tgz
     version: 1.0.0
 generated: "2023-02-13T23:07:17.670955014Z"
