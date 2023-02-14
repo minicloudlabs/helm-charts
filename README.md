@@ -20,7 +20,7 @@ helm repo add minicloudlabs https://minicloudlabs.github.io/helm-charts
 You can then run `helm search repo minicloudlabs` to see the charts.
 
 <!-- Keep full URL links to repo files because this README syncs from main to gh-pages.  -->
-See available charts and respective documentation at [helm-charts directory](https://github.com/minicloudlabs/blob/main/charts).
+See available charts and respective documentation at [helm-charts directory](https://github.com/minicloudlabs/helm-charts/tree/main/charts).
 
 ## License
 
