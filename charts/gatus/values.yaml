@@ -128,8 +128,13 @@ tolerations: []
 # ref: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
 extraInitContainers: []
   # - name: initializer
-    # image: busybox:latest
-    # command: ['sh', '-c', 'echo initialize the app before it starts']
+  #   image: busybox:latest
+  #   command: ['sh', '-c', 'echo initialize the app before it starts']
+
+# Additional containers (evaluated as template)
+extraContainers: []
+  # - name: initializer
+  #   image: nginx:latest
 
 # Enable persistence using Persistent Volume Claims
 # ref: http://kubernetes.io/docs/user-guide/persistent-volumes/

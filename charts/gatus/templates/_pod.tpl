@@ -57,7 +57,7 @@ containers:
         port: http
     {{- end }}
     resources:
-{{ toYaml .Values.resources | trim | indent 6 }}
+    {{ toYaml .Values.resources | trim | indent 6 }}
     volumeMounts:
       - name: {{ template "gatus.fullname" . }}-config
         mountPath: /config
@@ -75,6 +75,10 @@ containers:
         subPath: {{ .subPath | default "" }}
         readOnly: {{ .readOnly }}
     {{- end }}
+{{- if .Values.extraContainers }}
+initContainers:
+  {{- toYaml .Values.extraContainers | nindent 2 }}
+{{- end }}
 volumes:
   - name: {{ template "gatus.fullname" . }}-config
     configMap:
