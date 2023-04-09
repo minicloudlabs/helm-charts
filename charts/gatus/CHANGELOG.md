@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Add support for sidecarContainers
+ ### Changed
+- Bump Gatus image v5.3.1 => v5.3.2
 
 ## [3.1.5] - 2023-02-28
 ### Changed
