@@ -4,9 +4,11 @@ deployment:
   strategy: RollingUpdate
   annotateConfigChecksum: true
 
+# ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes
 readinessProbe:
   enabled: true
 
+# ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-a-liveness-http-request
 livenessProbe:
   enabled: true
 
@@ -26,10 +28,10 @@ image:
 hostNetwork:
   enabled: false
 
-# additional deployment annotations
+# Additional deployment annotations
 annotations: {}
 
-# additional deployment labels
+# Additional deployment labels
 labels: {}
 
 podAnnotations: {}
@@ -56,7 +58,7 @@ securityContext:
 
 # Expose the gatus service to be accessed from outside the cluster (LoadBalancer service)
 # or access it from within the cluster (ClusterIP service). Set the service type and the port to serve it.
-# ref: http://kubernetes.io/docs/user-guide/services/
+# ref: https://kubernetes.io/docs/concepts/services-networking/service/
 service:
   type: ClusterIP
   port: 80
@@ -79,13 +81,13 @@ ingress:
   pathType: Prefix
   extraPaths: []
   hosts:
-    - chart-example.local
+    - gatus.local
   # Extra paths to prepend to every host configuration, requires `ingress.hosts` to have one or more host entries.
   # Useful when configuring [custom actions with AWS ALB Ingress Controller](https://kubernetes-sigs.github.io/aws-alb-ingress-controller/guide/ingress/annotation/#actions).
   tls: []
-  #  - secretName: chart-example-tls
+  #  - secretName: gatus-tls
   #    hosts:
-  #      - chart-example.local
+  #      - gatus.local
 
 # Extra environment variables that will be pass onto deployment pods
 env: {}
@@ -117,7 +119,7 @@ resources: {}
 #    memory: 16Mi
 
 # Node labels for pod assignment
-# ref: https://kubernetes.io/docs/user-guide/node-selection/
+# ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector
 nodeSelector: {}
 
 # Tolerations for pod assignment
@@ -128,11 +130,11 @@ tolerations: []
 # ref: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
 extraInitContainers: []
   # - name: initializer
-    # image: busybox:latest
-    # command: ['sh', '-c', 'echo initialize the app before it starts']
+  #   image: busybox:latest
+  #   command: ['sh', '-c', 'echo initialize the app before it starts']
 
 # Enable persistence using Persistent Volume Claims
-# ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+# ref: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 persistence:
   enabled: false
   size: 200Mi
@@ -160,16 +162,15 @@ serviceMonitor:
   scrapeTimeout: 30s
   relabelings: []
 
-## ref: https://kubernetes.io/docs/concepts/services-networking/network-policies/
+# ref: https://github.com/prometheus-operator/prometheus-operator
 networkPolicy:
   enabled: false
   ingress:
     selectors: []
-  # ingress:
-    # selectors:
-      # - namespaceSelector:
-          # matchLabels:
-            # name: nginx-ingress
+    # - namespaceSelector:
+    #     matchLabels:
+    #       name: nginx-ingress
+
 # Gatus configuration
 # ref: https://github.com/TwiN/gatus#configuration
 config: {}
