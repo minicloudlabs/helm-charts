@@ -57,7 +57,7 @@ containers:
         port: http
     {{- end }}
     resources:
-{{ toYaml .Values.resources | trim | indent 6 }}
+      {{- toYaml .Values.resources | nindent 6 }}
     volumeMounts:
       - name: {{ template "gatus.fullname" . }}-config
         mountPath: /config
@@ -75,6 +75,16 @@ containers:
         subPath: {{ .subPath | default "" }}
         readOnly: {{ .readOnly }}
     {{- end }}
+{{- if .Values.sidecarContainers }}
+  {{- range $name, $spec :=  .Values.sidecarContainers }}
+  - name: {{ $name }}
+    {{- if not $spec.securityContext }}
+    securityContext:
+      {{- toYaml $.Values.securityContext | nindent 6 }}
+    {{- end }}
+    {{- toYaml $spec | nindent 4 }}
+  {{- end }}
+{{- end }}
 volumes:
   - name: {{ template "gatus.fullname" . }}-config
     configMap:

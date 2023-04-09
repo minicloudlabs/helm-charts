@@ -92,6 +92,11 @@ ingress:
 # Extra environment variables that will be pass onto deployment pods
 env: {}
 
+# Sidecar containers in the pod
+sidecarContainers: {}
+  # webserver:
+  #   image: nginx
+
 # Extra volume mounts
 extraVolumeMounts: []
   # - name: extra-volume-0
