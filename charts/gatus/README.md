@@ -120,7 +120,7 @@ _See [Customizing the Chart Before Installing](https://helm.sh/docs/intro/using_
 To see all configurable options with detailed comments, visit the chart's [values.yaml](./gatus/values.yaml), or run
 
 ```console
-helm inspect values gatus/gatus
+helm inspect values minicloudlabs/gatus
 ```
 
 ### `helmfile.yaml` example

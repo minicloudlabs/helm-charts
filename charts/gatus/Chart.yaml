@@ -8,7 +8,7 @@ type: application
 engine: gotpl
 home: https://minicloudlabs.github.io/helm-charts
 sources:
-  - https://github.com/minicloudlabs/helm-charts
+  - https://github.com/minicloudlabs/helm-charts/tree/main/charts/gatus
   - https://github.com/TwiN/gatus
 maintainers:
   - name: avakarev

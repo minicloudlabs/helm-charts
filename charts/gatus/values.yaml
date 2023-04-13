@@ -167,7 +167,7 @@ serviceMonitor:
   scrapeTimeout: 30s
   relabelings: []
 
-# ref: https://github.com/prometheus-operator/prometheus-operator
+# ref: https://kubernetes.io/docs/concepts/services-networking/network-policies/
 networkPolicy:
   enabled: false
   ingress:
