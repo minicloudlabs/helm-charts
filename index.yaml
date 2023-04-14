@@ -728,4 +728,28 @@ entries:
     urls:
     - https://minicloudlabs.github.io/helm-charts/packages/gatus-1.0.0.tgz
     version: 1.0.0
-generated: "2023-04-09T23:14:51.324247588Z"
+  youtrack:
+  - apiVersion: v2
+    appVersion: 2022.3.65379
+    created: "2023-04-14T00:38:00.055198617Z"
+    description: Powerful project management for all your teams
+    digest: 94024b1c8adfebd23cd8bedd651ba99621daff2f5812a1c9ac6699b2b4a446f8
+    home: https://minicloudlabs.github.io/helm-charts
+    icon: https://raw.githubusercontent.com/JetBrains/youtrack-mobile/7524cb6197a2c6a05511d2e25bf40df8282b5986/src/components/icon/youtrack-logo-512.png
+    keywords:
+    - youtrack
+    - jetbrains
+    - ticket
+    - issue
+    - project
+    maintainers:
+    - name: avakarev
+    name: youtrack
+    sources:
+    - https://github.com/minicloudlabs/helm-charts/tree/main/charts/youtrack
+    - https://hub.docker.com/r/jetbrains/youtrack
+    type: application
+    urls:
+    - https://github.com/minicloudlabs/helm-charts/releases/download/youtrack-1.0.0/youtrack-1.0.0.tgz
+    version: 1.0.0
+generated: "2023-04-14T00:38:00.055284917Z"
