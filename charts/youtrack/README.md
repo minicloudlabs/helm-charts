@@ -83,15 +83,6 @@ _See [helm uninstall](https://helm.sh/docs/helm/helm_uninstall/) for command doc
 | `persistence.selectorLabels`              | PersistentVolumeClaim selector labels           | `{}`                                |
 | `persistence.existingClaim`               | Use an existing PVC to persist data             | `nil`                               |
 | `persistence.storageClassName`            | Type of persistent volume claim                 | `nil`                               |
-| `serviceMonitor.enabled`                  | Use servicemonitor from prometheus operator     | `false`                             |
-| `serviceMonitor.namespace`                | Namespace this servicemonitor is installed in   | ``                                  |
-| `serviceMonitor.interval`                 | How frequently Prometheus should scrape         | `1m`                                |
-| `serviceMonitor.path`                     | Path to scrape                                  | `/metrics`                          |
-| `serviceMonitor.scheme`                   | Scheme to use for metrics scraping              | `http`                              |
-| `serviceMonitor.tlsConfig`                | TLS configuration block for the endpoint        | `{}`                                |
-| `serviceMonitor.labels`                   | Labels for the servicemonitor object            | `{}`                                |
-| `serviceMonitor.scrapeTimeout`            | Timeout after which the scrape is ended         | `30s`                               |
-| `serviceMonitor.relabelings`              | RelabelConfigs for samples before ingestion     | `[]`                                |
 | `networkPolicy.enabled`                   | Enable creation of NetworkPolicy resources      | `false`                             |
 | `networkPolicy.ingress.selectors`         | List of Ingress Rule selectors                  | `[]`                                |
 
