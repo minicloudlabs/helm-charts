@@ -21,7 +21,7 @@ jobs:
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
       - name: Install helm
         uses: azure/setup-helm@v3
-        with: { version: v3.11.1 }
+        with: { version: v3.11.3 }
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1
         env:
