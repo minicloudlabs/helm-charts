@@ -1,0 +1,164 @@
+# See `kubectl explain deployment.spec.strategy` for more
+# ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
+deployment:
+  strategy: RollingUpdate
+
+# ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes
+readinessProbe:
+  enabled: true
+
+# ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-a-liveness-http-request
+livenessProbe:
+  enabled: true
+
+image:
+  repository: jetbrains/youtrack
+  # Overrides the Youtrack image tag whose default is the chart appVersion
+  tag: ""
+  sha: ""
+  pullPolicy: IfNotPresent
+
+  # Optionally specify an array of imagePullSecrets.
+  # Secrets must be manually created in the namespace.
+  # ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+  # pullSecrets:
+  #   - myRegistrKeySecretName
+
+hostNetwork:
+  enabled: false
+
+# additional deployment annotations
+annotations: {}
+
+# additional deployment labels
+labels: {}
+
+podAnnotations: {}
+
+podLabels: {}
+
+# Apply extra labels to common labels
+extraLabels: {}
+
+serviceAccount:
+  create: false
+  name: ""
+  annotations: {}
+  autoMount: false
+
+podSecurityContext:
+  fsGroup: 13001
+  runAsUser: 13001
+
+# Expose the youtrack service to be accessed from outside the cluster (LoadBalancer service)
+# or access it from within the cluster (ClusterIP service). Set the service type and the port to serve it.
+# ref: http://kubernetes.io/docs/user-guide/services/
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 8080
+  annotations: {}
+  labels: {}
+
+ingress:
+  enabled: false
+  # For Kubernetes >= 1.18 you should specify the ingress-controller via the field ingressClassName
+  # See https://kubernetes.io/blog/2020/04/02/improvements-to-the-ingress-api-in-kubernetes-1.18/#specifying-the-class-of-an-ingress
+  # ingressClassName: nginx
+  # Values can be templated
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  labels: {}
+  path: /
+  # pathType is only for k8s >= 1.1=
+  pathType: Prefix
+  extraPaths: []
+  hosts:
+    - youtrack.local
+  # Extra paths to prepend to every host configuration, requires `ingress.hosts` to have one or more host entries.
+  # Useful when configuring [custom actions with AWS ALB Ingress Controller](https://kubernetes-sigs.github.io/aws-alb-ingress-controller/guide/ingress/annotation/#actions).
+  tls: []
+  #  - secretName: youtrack-tls
+  #    hosts:
+  #      - youtrack.local
+
+# Extra environment variables that will be pass onto deployment pods
+env: {}
+
+# Extra volume mounts
+extraVolumeMounts: []
+  # - name: extra-volume-0
+  #   mountPath: /mnt/volume0
+  #   readOnly: true
+  #   existingClaim: volume-claim
+  # - name: extra-volume-1
+  #   mountPath: /mnt/volume1
+  #   readOnly: true
+  #   hostPath: /usr/shared/
+  # - name: extra-volume-2
+  #   mountPath: /mnt/volume2
+  #   readOnly: true
+  #   existingConfigMap: config-map
+
+# Include secret's content in pods environment
+secrets: false
+
+resources: {}
+  # requests:
+  #   cpu: 200m
+  #   memory: 1Gi
+  # limits:
+  #   cpu: 1000m
+  #   memory: 2Gi
+
+# Node labels for pod assignment
+# ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector
+nodeSelector: {}
+
+# Tolerations for pod assignment
+# ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
+tolerations: []
+
+# Additional init containers (evaluated as template)
+# ref: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
+extraInitContainers: []
+  # - name: initializer
+    # image: busybox:latest
+    # command: ['sh', '-c', 'echo initialize the app before it starts']
+
+# Enable persistence using Persistent Volume Claims
+# ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+persistence:
+  enabled: false
+  size: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  finalizers:
+    - kubernetes.io/pvc-protection
+  # annotations: {}
+  # selectorLabels: {}
+  # existingClaim: ""
+  # storageClassName: default
+
+serviceMonitor:
+  # If true, a ServiceMonitor CRD is created for a prometheus operator
+  # https://github.com/coreos/prometheus-operator
+  enabled: false
+  # namespace: monitoring  (defaults to use the namespace this chart is deployed to)
+  interval: 1m
+  path: /metrics
+  scheme: http
+  tlsConfig: {}
+  labels: {}
+  scrapeTimeout: 30s
+  relabelings: []
+
+# ref: https://kubernetes.io/docs/concepts/services-networking/network-policies/
+networkPolicy:
+  enabled: false
+  ingress:
+    selectors: []
+    # - namespaceSelector:
+    #     matchLabels:
+    #       name: nginx-ingress
