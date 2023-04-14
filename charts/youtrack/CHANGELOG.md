@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.0] - 2023-04-14
+## [1.0.1] - 2023-04-14
+### Removed
+- Remove servicemonitor cause youtrack doesn't export any prometheus metrics
+
+## [1.0.0] - 2023-04-14
 ### Added
 - Initial implementation
 

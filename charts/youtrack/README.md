@@ -106,7 +106,7 @@ releases:
   - name: youtrack
     namespace: youtrack
     chart: minicloudlabs/youtrack
-    version: 1.0.0
+    version: 1.0.1
     values:
       - persistence:
           enabled: true
