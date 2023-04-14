@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "youtrack.fullname" . }}
+  namespace: {{ template "youtrack.namespace" . }}
+  labels:
+    {{- include "youtrack.labels" . | nindent 4 }}
+{{- if .Values.labels }}
+{{ toYaml .Values.labels | indent 4 }}
+{{- end }}
+{{- with .Values.annotations }}
+  annotations:
+{{ toYaml . | indent 4 }}
+{{- end }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "youtrack.selectorLabels" . | nindent 6 }}
+  strategy:
+    type: {{ .Values.deployment.strategy }}
+  template:
+    metadata:
+      labels:
+        {{- include "youtrack.selectorLabels" . | nindent 8 }}
+        {{- with .Values.podLabels }}
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
+      annotations:
+        {{- with .Values.podAnnotations }}
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
+    spec:
+      {{- include "youtrack.pod" . | nindent 6 }}
