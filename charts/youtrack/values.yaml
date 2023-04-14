@@ -141,19 +141,6 @@ persistence:
   # existingClaim: ""
   # storageClassName: default
 
-serviceMonitor:
-  # If true, a ServiceMonitor CRD is created for a prometheus operator
-  # https://github.com/coreos/prometheus-operator
-  enabled: false
-  # namespace: monitoring  (defaults to use the namespace this chart is deployed to)
-  interval: 1m
-  path: /metrics
-  scheme: http
-  tlsConfig: {}
-  labels: {}
-  scrapeTimeout: 30s
-  relabelings: []
-
 # ref: https://kubernetes.io/docs/concepts/services-networking/network-policies/
 networkPolicy:
   enabled: false
