@@ -77,6 +77,8 @@ Gatus version is upgraded from 2 to 3. Gatus 3 deprecates `memory` type of stora
 | `service.annotations`                     | Service annotations                             | `{}`                                |
 | `service.labels`                          | Custom labels                                   | `{}`                                |
 | `ingress.enabled`                         | Enables Ingress                                 | `false`                             |
+| `ingress.ingressClassName`                | Ingress ClassName (for k8s 1.18+)               | ``                                  |
+| `ingress.name`                            | Ingress name                                    | ``                                  |
 | `ingress.annotations`                     | Ingress annotations (values are templated)      | `{}`                                |
 | `ingress.labels`                          | Custom labels                                   | `{}`                                |
 | `ingress.path`                            | Ingress accepted path                           | `/`                                 |
