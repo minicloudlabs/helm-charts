@@ -10,11 +10,7 @@
 apiVersion: {{ include "gatus.ingress.apiVersion" . }}
 kind: Ingress
 metadata:
-{{- if .Values.ingress.name }}
-  name: {{ .Values.ingress.name }}
-{{- else }}
-  name: {{ $fullName }}
-{{- end }}
+  name: {{ .Values.ingress.name | default $fullName }}
   namespace: {{ template "gatus.namespace" . }}
   labels:
     {{- include "gatus.labels" . | nindent 4 }}
