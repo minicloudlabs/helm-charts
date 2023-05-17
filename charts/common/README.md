@@ -7,7 +7,7 @@
 ```yaml
 dependencies:
   - name: common
-    version: 0.0.1
+    version: 0.0.2
     repository: https://minicloudlabs.github.io/helm-charts
 ```
 
@@ -22,6 +22,9 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ include "common.names.fullname" . }}
+  namespace: {{ include "common.names.namespace" . }}
+  labels:
+    {{- include "common.labels.baseLabels" . | nindent 4 }}
 data:
   myvalue: "Hello World"
 ```
