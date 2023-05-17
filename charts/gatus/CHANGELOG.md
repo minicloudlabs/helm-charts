@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.3.2] - 2023-05-17
+### Added
+- Migrate to common lib
+
 ## [3.3.1] - 2023-05-15
 ### Added
 - Add support for custom ingress names
@@ -190,7 +194,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial implementation
 
-[Unreleased]: https://github.com/minicloudlabs/helm-charts/compare/gatus-3.3.1...HEAD
+[Unreleased]: https://github.com/minicloudlabs/helm-charts/compare/gatus-3.3.2...HEAD
+[3.3.1]: https://github.com/minicloudlabs/helm-charts/compare/gatus-3.3.1...gatus-3.3.2
 [3.3.1]: https://github.com/minicloudlabs/helm-charts/compare/gatus-3.3.0...gatus-3.3.1
 [3.3.0]: https://github.com/minicloudlabs/helm-charts/compare/gatus-3.2.0...gatus-3.3.0
 [3.2.0]: https://github.com/minicloudlabs/helm-charts/compare/gatus-3.1.5...gatus-3.2.0
