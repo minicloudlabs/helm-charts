@@ -10,7 +10,7 @@ jobs:
         with: { fetch-depth: 0 }
       - name: Setup helm
         uses: azure/setup-helm@v3
-        with: { version: v3.11.3 }
+        with: { version: v3.12.0 }
       - name: Setup python
         uses: actions/setup-python@v4
         with: { python-version: '3.9', check-latest: true }
