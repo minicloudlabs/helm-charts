@@ -2,8 +2,8 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: {{ template "youtrack.fullname" . }}
-  namespace: {{ template "youtrack.namespace" . }}
+  name: {{ include "common.names.fullname" . }}
+  namespace: {{ include "common.names.namespace" . }}
   labels:
     {{- include "youtrack.labels" . | nindent 4 }}
 {{- if .Values.labels }}
