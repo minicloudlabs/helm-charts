@@ -13,3 +13,7 @@ sources:
 maintainers:
   - name: avakarev
 keywords: ['gatus', 'healthcheck', 'uptime', 'monitoring']
+dependencies:
+  - name: common
+    repository: https://minicloudlabs.github.io/helm-charts
+    version: 0.x.x

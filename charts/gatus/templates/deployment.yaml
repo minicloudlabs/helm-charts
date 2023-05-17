@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "gatus.fullname" . }}
-  namespace: {{ template "gatus.namespace" . }}
+  name: {{ include "common.names.fullname" . }}
+  namespace: {{ include "common.names.namespace" . }}
   labels:
     {{- include "gatus.labels" . | nindent 4 }}
 {{- if .Values.labels }}
