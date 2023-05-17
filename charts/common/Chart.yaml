@@ -1,8 +1,8 @@
 apiVersion: v2
 name: common
 description: A Helm Library Chart for grouping common logic between Minicloud Labs charts
-version: 0.0.1 # version matches appVersion
-appVersion: 0.0.1 # appVersion matches version
+version: 0.0.1  # version matches appVersion
+appVersion: 0.0.1  # appVersion matches version
 type: library
 home: https://minicloudlabs.github.io/helm-charts
 sources:
