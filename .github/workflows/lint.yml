@@ -5,9 +5,26 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup helm
-      uses: azure/setup-helm@v3
-      with: { version: v3.11.3 }
-    - name: Lint
-      run: helm lint charts/*
+      - name: Checkout
+        uses: actions/checkout@v3
+        with: { fetch-depth: 0 }
+      - name: Setup helm
+        uses: azure/setup-helm@v3
+        with: { version: v3.11.3 }
+      - name: Setup pythong
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          check-latest: true
+      - name: Setup chart-testing
+        uses: helm/chart-testing-action@v2.4.0
+      - name: Run chart-testing (list-changed)
+        id: list-changed
+        run: |
+          changed=$(ct list-changed --config .github/ct.yaml)
+          if [[ -n "$changed" ]]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+      - name: Run chart-testing (lint)
+        if: steps.list-changed.outputs.changed == 'true'
+        run: ct lint --config .github/ct.yaml
