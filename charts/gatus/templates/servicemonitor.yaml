@@ -10,7 +10,7 @@ metadata:
   namespace: {{ include "common.names.namespace" . }}
   {{- end }}
   labels:
-    {{- include "gatus.labels" . | nindent 4 }}
+    {{- include "common.labels.baseLabels" . | nindent 4 }}
     {{- if .Values.serviceMonitor.labels }}
     {{- toYaml .Values.serviceMonitor.labels | nindent 4 }}
     {{- end }}
@@ -37,7 +37,7 @@ spec:
   jobLabel: "{{ .Release.Name }}"
   selector:
     matchLabels:
-      {{- include "gatus.selectorLabels" . | nindent 8 }}
+      {{- include "common.labels.selectorLabels" . | nindent 8 }}
   namespaceSelector:
     matchNames:
       - {{ .Release.Namespace }}

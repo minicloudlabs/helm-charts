@@ -13,7 +13,7 @@ metadata:
   name: {{ .Values.ingress.name | default $fullName }}
   namespace: {{ include "common.names.namespace" . }}
   labels:
-    {{- include "gatus.labels" . | nindent 4 }}
+    {{- include "common.labels.baseLabels" . | nindent 4 }}
 {{- if .Values.ingress.labels }}
 {{ toYaml .Values.ingress.labels | indent 4 }}
 {{- end }}
