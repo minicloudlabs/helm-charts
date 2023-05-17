@@ -8,7 +8,7 @@ imagePullSecrets:
   - name: {{ . }}
   {{- end }}
 {{- end }}
-serviceAccountName: {{ template "gatus.serviceAccountName" . }}
+serviceAccountName: {{ include "common.names.serviceAccountName" . }}
 automountServiceAccountToken: {{ .Values.serviceAccount.autoMount }}
 securityContext:
   {{- toYaml .Values.podSecurityContext | nindent 2 }}
@@ -39,10 +39,10 @@ containers:
     {{- end }}
     envFrom:
       - configMapRef:
-          name: {{ include "gatus.fullname" . }}
+          name: {{ include "common.names.fullname" . }}
       {{- if .Values.secrets }}
       - secretRef:
-          name: {{ include "gatus.fullname" . }}
+          name: {{ include "common.names.fullname" . }}
       {{- end }}
     {{- if .Values.readinessProbe.enabled }}
     readinessProbe:
@@ -59,11 +59,11 @@ containers:
     resources:
       {{- toYaml .Values.resources | nindent 6 }}
     volumeMounts:
-      - name: {{ template "gatus.fullname" . }}-config
+      - name: {{ include "common.names.fullname" . }}-config
         mountPath: /config
         readOnly: true
       {{- if .Values.persistence.enabled }}
-      - name: {{ template "gatus.fullname" . }}-data
+      - name: {{ include "common.names.fullname" . }}-data
         mountPath: {{ .Values.persistence.mountPath }}
         {{- if .Values.persistence.subPath }}
         subPath: {{ .Values.persistence.subPath }}
@@ -86,13 +86,13 @@ containers:
   {{- end }}
 {{- end }}
 volumes:
-  - name: {{ template "gatus.fullname" . }}-config
+  - name: {{ include "common.names.fullname" . }}-config
     configMap:
-      name: {{ template "gatus.fullname" . }}
+      name: {{ include "common.names.fullname" . }}
   {{- if .Values.persistence.enabled }}
-  - name: {{ template "gatus.fullname" . }}-data
+  - name: {{ include "common.names.fullname" . }}-data
     persistentVolumeClaim:
-      claimName: {{ .Values.persistence.existingClaim | default (include "gatus.fullname" .) }}
+      claimName: {{ .Values.persistence.existingClaim | default (include "common.names.fullname" .) }}
   {{- end }}
 {{- range .Values.extraVolumeMounts }}
   - name: {{ .name }}

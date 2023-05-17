@@ -3,11 +3,11 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: {{ template "gatus.fullname" . }}
+  name: {{ include "common.names.fullname" . }}
   {{- if .Values.serviceMonitor.namespace }}
   namespace: {{ .Values.serviceMonitor.namespace }}
   {{- else }}
-  namespace: {{ template "gatus.namespace" . }}
+  namespace: {{ include "common.names.namespace" . }}
   {{- end }}
   labels:
     {{- include "gatus.labels" . | nindent 4 }}

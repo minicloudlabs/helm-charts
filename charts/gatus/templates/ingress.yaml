@@ -2,7 +2,7 @@
 {{- $ingressApiIsStable := eq (include "gatus.ingress.isStable" .) "true" -}}
 {{- $ingressSupportsIngressClassName := eq (include "gatus.ingress.supportsIngressClassName" .) "true" -}}
 {{- $ingressSupportsPathType := eq (include "gatus.ingress.supportsPathType" .) "true" -}}
-{{- $fullName := include "gatus.fullname" . -}}
+{{- $fullName := include "common.names.fullname" . -}}
 {{- $servicePort := .Values.service.port -}}
 {{- $ingressPath := .Values.ingress.path -}}
 {{- $ingressPathType := .Values.ingress.pathType -}}
@@ -11,7 +11,7 @@ apiVersion: {{ include "gatus.ingress.apiVersion" . }}
 kind: Ingress
 metadata:
   name: {{ .Values.ingress.name | default $fullName }}
-  namespace: {{ template "gatus.namespace" . }}
+  namespace: {{ include "common.names.namespace" . }}
   labels:
     {{- include "gatus.labels" . | nindent 4 }}
 {{- if .Values.ingress.labels }}
