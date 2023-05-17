@@ -798,6 +798,33 @@ entries:
   youtrack:
   - apiVersion: v2
     appVersion: 2023.1.9452
+    created: "2023-05-17T02:02:05.988040481Z"
+    dependencies:
+    - name: common
+      repository: https://minicloudlabs.github.io/helm-charts
+      version: 0.x.x
+    description: Powerful project management for all your teams
+    digest: 234ab475cff7417af5328911dc2a06a2bdd49828bdb9bbbca6edafb4b3fb4d01
+    home: https://minicloudlabs.github.io/helm-charts
+    icon: https://raw.githubusercontent.com/JetBrains/youtrack-mobile/7524cb6197a2c6a05511d2e25bf40df8282b5986/src/components/icon/youtrack-logo-512.png
+    keywords:
+    - youtrack
+    - jetbrains
+    - ticket
+    - issue
+    - project
+    maintainers:
+    - name: avakarev
+    name: youtrack
+    sources:
+    - https://github.com/minicloudlabs/helm-charts/tree/main/charts/youtrack
+    - https://hub.docker.com/r/jetbrains/youtrack
+    type: application
+    urls:
+    - https://github.com/minicloudlabs/helm-charts/releases/download/youtrack-1.0.3/youtrack-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: 2023.1.9452
     created: "2023-05-09T20:47:06.997142459Z"
     description: Powerful project management for all your teams
     digest: 7e98a92eff0a88c131b3cad38c96dc7409428e95df730a14eac0dd364e81a811
@@ -865,4 +892,4 @@ entries:
     urls:
     - https://github.com/minicloudlabs/helm-charts/releases/download/youtrack-1.0.0/youtrack-1.0.0.tgz
     version: 1.0.0
-generated: "2023-05-17T00:25:21.550984542Z"
+generated: "2023-05-17T02:02:05.988136337Z"
