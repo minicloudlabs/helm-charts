@@ -2,7 +2,7 @@
 {{- $ingressApiIsStable := eq (include "youtrack.ingress.isStable" .) "true" -}}
 {{- $ingressSupportsIngressClassName := eq (include "youtrack.ingress.supportsIngressClassName" .) "true" -}}
 {{- $ingressSupportsPathType := eq (include "youtrack.ingress.supportsPathType" .) "true" -}}
-{{- $fullName := include "youtrack.fullname" . -}}
+{{- $fullName := include "common.names.fullname" . -}}
 {{- $servicePort := .Values.service.port -}}
 {{- $ingressPath := .Values.ingress.path -}}
 {{- $ingressPathType := .Values.ingress.pathType -}}
@@ -11,7 +11,7 @@ apiVersion: {{ include "youtrack.ingress.apiVersion" . }}
 kind: Ingress
 metadata:
   name: {{ $fullName }}
-  namespace: {{ template "youtrack.namespace" . }}
+  namespace: {{ include "common.names.namespace" . }}
   labels:
     {{- include "youtrack.labels" . | nindent 4 }}
 {{- if .Values.ingress.labels }}

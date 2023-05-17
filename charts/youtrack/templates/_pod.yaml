@@ -8,7 +8,7 @@ imagePullSecrets:
   - name: {{ . }}
   {{- end }}
 {{- end }}
-serviceAccountName: {{ template "youtrack.serviceAccountName" . }}
+serviceAccountName: {{ include "common.names.serviceAccountName" . }}
 automountServiceAccountToken: {{ .Values.serviceAccount.autoMount }}
 securityContext:
   {{- toYaml .Values.podSecurityContext | nindent 2 }}
@@ -32,19 +32,19 @@ containers:
       {{- toYaml .Values.resources | nindent 6 }}
       {{- if .Values.persistence.enabled }}
     volumeMounts:
-      - name: {{ template "youtrack.fullname" . }}
+      - name: {{ include "common.names.fullname" . }}
         mountPath: /opt/youtrack/data
         subPath: data
-      - name: {{ template "youtrack.fullname" . }}
+      - name: {{ include "common.names.fullname" . }}
         mountPath: /opt/youtrack/conf
         subPath: conf
-      - name: {{ template "youtrack.fullname" . }}
+      - name: {{ include "common.names.fullname" . }}
         mountPath: /opt/youtrack/logs
         subPath: logs
-      - name: {{ template "youtrack.fullname" . }}
+      - name: {{ include "common.names.fullname" . }}
         mountPath: /opt/youtrack/backups
         subPath: backups
-      - name: {{ template "youtrack.fullname" . }}-temp
+      - name: {{ include "common.names.fullname" . }}-temp
         mountPath: /opt/youtrack/temp
       {{- end }}
 {{- with .Values.nodeSelector }}
@@ -61,10 +61,10 @@ affinity:
 {{- end }}
 {{- if .Values.persistence.enabled }}
 volumes:
-  - name: {{ template "youtrack.fullname" . }}
+  - name: {{ include "common.names.fullname" . }}
     persistentVolumeClaim:
-      claimName: {{ .Values.persistence.existingClaim | default (include "youtrack.fullname" .) }}
-  - name: {{ template "youtrack.fullname" . }}-temp
+      claimName: {{ .Values.persistence.existingClaim | default (include "common.names.fullname" .) }}
+  - name: {{ include "common.names.fullname" . }}-temp
     emptyDir: {}
 {{- end }}
 {{- end }}
