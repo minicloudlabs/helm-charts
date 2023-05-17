@@ -4,7 +4,7 @@ metadata:
   name: {{ include "common.names.fullname" . }}
   namespace: {{ include "common.names.namespace" . }}
   labels:
-    {{- include "gatus.labels" . | nindent 4 }}
+    {{- include "common.labels.baseLabels" . | nindent 4 }}
 {{- if .Values.labels }}
 {{ toYaml .Values.labels | indent 4 }}
 {{- end }}
@@ -16,13 +16,13 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      {{- include "gatus.selectorLabels" . | nindent 6 }}
+      {{- include "common.labels.selectorLabels" . | nindent 6 }}
   strategy:
     type: {{ .Values.deployment.strategy }}
   template:
     metadata:
       labels:
-        {{- include "gatus.selectorLabels" . | nindent 8 }}
+        {{- include "common.labels.selectorLabels" . | nindent 8 }}
         {{- with .Values.podLabels }}
           {{- toYaml . | nindent 8 }}
         {{- end }}

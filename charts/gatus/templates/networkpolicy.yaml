@@ -5,7 +5,7 @@ metadata:
   name: {{ include "common.names.fullname" . }}
   namespace: {{ include "common.names.namespace" . }}
   labels:
-    {{- include "gatus.labels" . | nindent 4 }}
+    {{- include "common.labels.baseLabels" . | nindent 4 }}
 {{- if .Values.labels }}
 {{ toYaml .Values.labels | indent 4 }}
 {{- end }}
@@ -16,7 +16,7 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-    {{- include "gatus.selectorLabels" . | nindent 6 }}
+    {{- include "common.labels.selectorLabels" . | nindent 6 }}
   {{- if .Values.networkPolicy.ingress.selectors }}
   ingress:
     - from:
