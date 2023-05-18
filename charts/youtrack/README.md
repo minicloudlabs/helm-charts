@@ -59,6 +59,8 @@ _See [helm uninstall](https://helm.sh/docs/helm/helm_uninstall/) for command doc
 | `service.annotations`                     | Service annotations                             | `{}`                                |
 | `service.labels`                          | Custom labels                                   | `{}`                                |
 | `ingress.enabled`                         | Enables Ingress                                 | `false`                             |
+| `ingress.ingressClassName`                | Ingress ClassName (for k8s 1.18+)               | ``                                  |
+| `ingress.name`                            | Ingress name                                    | ``                                  |
 | `ingress.annotations`                     | Ingress annotations (values are templated)      | `{}`                                |
 | `ingress.labels`                          | Custom labels                                   | `{}`                                |
 | `ingress.path`                            | Ingress accepted path                           | `/`                                 |
