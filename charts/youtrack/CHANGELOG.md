@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.6] - 2023-05-18
+### Changed
+- Upgrade common lib 0.0.3 => 0.1.0
+
 ## [1.0.5] - 2023-05-18
 ### Changed
 - Upgrade common lib 0.0.2 => 0.0.3
@@ -31,7 +35,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial implementation
 
-[Unreleased]: https://github.com/minicloudlabs/helm-charts/compare/youtrack-1.0.5...HEAD
+[Unreleased]: https://github.com/minicloudlabs/helm-charts/compare/youtrack-1.0.6...HEAD
+[1.0.6]: https://github.com/minicloudlabs/helm-charts/compare/youtrack-1.0.5...youtrack-1.0.6
 [1.0.5]: https://github.com/minicloudlabs/helm-charts/compare/youtrack-1.0.4...youtrack-1.0.5
 [1.0.4]: https://github.com/minicloudlabs/helm-charts/compare/youtrack-1.0.3...youtrack-1.0.4
 [1.0.3]: https://github.com/minicloudlabs/helm-charts/compare/youtrack-1.0.2...youtrack-1.0.3
