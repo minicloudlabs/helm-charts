@@ -16,5 +16,4 @@ keywords: ['gatus', 'healthcheck', 'uptime', 'monitoring']
 dependencies:
   - name: common
     repository: https://minicloudlabs.github.io/helm-charts
-    # repository: file://../common
     version: 0.x.x
