@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - Upgrade common lib 0.0.2 => 0.0.3
+- Bump youtrack image 2023.1.9452 => 2023.1.9689
 
 ## [1.0.4] - 2023-05-17
 ### Changed
