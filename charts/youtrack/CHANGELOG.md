@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.5] - 2023-05-18
 ### Changed
 - Upgrade common lib 0.0.2 => 0.0.3
 - Bump youtrack image 2023.1.9452 => 2023.1.9689
@@ -29,7 +31,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial implementation
 
-[Unreleased]: https://github.com/minicloudlabs/helm-charts/compare/youtrack-1.0.4...HEAD
+[Unreleased]: https://github.com/minicloudlabs/helm-charts/compare/youtrack-1.0.5...HEAD
+[1.0.5]: https://github.com/minicloudlabs/helm-charts/compare/youtrack-1.0.4...youtrack-1.0.5
 [1.0.4]: https://github.com/minicloudlabs/helm-charts/compare/youtrack-1.0.3...youtrack-1.0.4
 [1.0.3]: https://github.com/minicloudlabs/helm-charts/compare/youtrack-1.0.2...youtrack-1.0.3
 [1.0.2]: https://github.com/minicloudlabs/helm-charts/compare/youtrack-1.0.1...youtrack-1.0.2
