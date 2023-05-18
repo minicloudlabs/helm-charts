@@ -7,7 +7,7 @@
 ```yaml
 dependencies:
   - name: common
-    version: 0.0.2
+    version: 0.0.3
     repository: https://minicloudlabs.github.io/helm-charts
 ```
 
