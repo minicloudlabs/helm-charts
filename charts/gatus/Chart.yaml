@@ -2,7 +2,7 @@ apiVersion: v2
 name: gatus
 description: Automated service health dashboard
 icon: https://raw.githubusercontent.com/TwiN/gatus/a1c8422c2ff2b9d0a6f184c99e4dc728d3f2cd75/web/static/logo-192x192.png
-version: 3.3.3
+version: 3.3.4
 appVersion: v5.4.0
 type: application
 engine: gotpl
