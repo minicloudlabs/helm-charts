@@ -1,6 +1,6 @@
 dependencies:
 - name: common
   repository: https://minicloudlabs.github.io/helm-charts
-  version: 0.0.2
-digest: sha256:379897a7b8799c7dca74216456928c4034f7a8e2b742ff6bbd513d347066374b
-generated: "2023-05-17T21:27:59.406973+02:00"
+  version: 0.0.3
+digest: sha256:ae466733e97ba6168672c3fca71858eee85524be2962d80b7b1cce7f0e1e40bf
+generated: "2023-05-18T15:37:32.88607+02:00"
