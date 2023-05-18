@@ -2,6 +2,28 @@ apiVersion: v1
 entries:
   common:
   - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2023-05-18T16:30:06.148605105Z"
+    description: A Helm Library Chart for grouping common logic between Minicloud
+      Labs charts
+    digest: da2b4226f2bee4637487bb01651d71fd58e05a63b371a9712eec79ae12dc401d
+    home: https://minicloudlabs.github.io/helm-charts
+    keywords:
+    - common
+    - library
+    - helper
+    - template
+    - function
+    maintainers:
+    - name: avakarev
+    name: common
+    sources:
+    - https://github.com/minicloudlabs/helm-charts/tree/main/charts/common
+    type: library
+    urls:
+    - https://github.com/minicloudlabs/helm-charts/releases/download/common-0.1.0/common-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v2
     appVersion: 0.0.3
     created: "2023-05-18T13:29:14.80037697Z"
     description: A Helm Library Chart for grouping common logic between Minicloud
@@ -1068,4 +1090,4 @@ entries:
     urls:
     - https://github.com/minicloudlabs/helm-charts/releases/download/youtrack-1.0.0/youtrack-1.0.0.tgz
     version: 1.0.0
-generated: "2023-05-18T14:27:50.656706714Z"
+generated: "2023-05-18T16:30:06.148796706Z"
