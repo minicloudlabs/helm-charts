@@ -91,6 +91,16 @@ ingress:
 
 # Extra environment variables that will be pass onto deployment pods
 env: {}
+  # ENV_VAR_1: VALUE
+  # ENV_VAR_2:
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: gatus-secret
+  #       key: secret
+
+envFrom: []
+  # - secretRef:
+  #     name: gatus-secret
 
 # Sidecar containers in the pod
 sidecarContainers: {}

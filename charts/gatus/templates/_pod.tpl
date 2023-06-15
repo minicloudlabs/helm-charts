@@ -33,8 +33,14 @@ containers:
     {{- if .Values.env }}
     env:
     {{- range $key, $value := .Values.env }}
+    {{- if kindIs "map" $value }}
+        - name: "{{ $key }}"
+          valueFrom:
+            {{- toYaml $value.valueFrom | nindent 12 }}
+    {{- else }}
         - name: "{{ $key }}"
           value: "{{ $value }}"
+    {{- end }}
     {{- end }}
     {{- end }}
     envFrom:
@@ -43,6 +49,9 @@ containers:
       {{- if .Values.secrets }}
       - secretRef:
           name: {{ include "common.names.fullname" . }}
+      {{- end }}
+      {{- if .Values.envFrom }}
+      {{- toYaml .Values.envFrom | nindent 6 }}
       {{- end }}
     {{- if .Values.readinessProbe.enabled }}
     readinessProbe:
