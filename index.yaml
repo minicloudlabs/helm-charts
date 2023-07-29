@@ -91,6 +91,32 @@ entries:
     version: 0.0.1
   gatus:
   - apiVersion: v2
+    appVersion: v5.5.1
+    created: "2023-07-29T11:51:50.375795117Z"
+    dependencies:
+    - name: common
+      repository: https://minicloudlabs.github.io/helm-charts
+      version: 0.x.x
+    description: Automated service health dashboard
+    digest: 1521a4ae0d1857af94866ac95d0ad86f90373c9d0b81d896f49b236770b806a1
+    home: https://minicloudlabs.github.io/helm-charts
+    icon: https://raw.githubusercontent.com/TwiN/gatus/a1c8422c2ff2b9d0a6f184c99e4dc728d3f2cd75/web/static/logo-192x192.png
+    keywords:
+    - gatus
+    - healthcheck
+    - uptime
+    - monitoring
+    maintainers:
+    - name: avakarev
+    name: gatus
+    sources:
+    - https://github.com/minicloudlabs/helm-charts/tree/main/charts/gatus
+    - https://github.com/TwiN/gatus
+    type: application
+    urls:
+    - https://github.com/minicloudlabs/helm-charts/releases/download/gatus-3.4.0/gatus-3.4.0.tgz
+    version: 3.4.0
+  - apiVersion: v2
     appVersion: v5.4.0
     created: "2023-05-18T16:37:37.963009684Z"
     dependencies:
@@ -1170,4 +1196,4 @@ entries:
     urls:
     - https://github.com/minicloudlabs/helm-charts/releases/download/youtrack-1.0.0/youtrack-1.0.0.tgz
     version: 1.0.0
-generated: "2023-07-29T11:24:15.680031601Z"
+generated: "2023-07-29T11:51:50.376326831Z"
