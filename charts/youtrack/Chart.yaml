@@ -3,7 +3,7 @@ name: youtrack
 description: Powerful project management for all your teams
 icon: https://raw.githubusercontent.com/JetBrains/youtrack-mobile/7524cb6197a2c6a05511d2e25bf40df8282b5986/src/components/icon/youtrack-logo-512.png
 version: 1.0.6
-appVersion: 2023.1.9689
+appVersion: 2023.1.16998
 type: application
 engine: gotpl
 home: https://minicloudlabs.github.io/helm-charts
