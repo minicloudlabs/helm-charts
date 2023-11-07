@@ -111,6 +111,10 @@ extraVolumeMounts: []
   #   mountPath: /mnt/volume2
   #   readOnly: true
   #   existingConfigMap: config-map
+  # - name: extra-volume-3
+  #   mountPath: /mnt/volume3
+  #   readOnly: true
+  #   existingSecret: secret-name
 
 # Include secret's content in pods environment
 secrets: false
