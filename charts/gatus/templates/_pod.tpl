@@ -106,6 +106,9 @@ volumes:
     {{- else if .existingConfigMap }}
     configMap:
       name: {{ .existingConfigMap }}
+    {{- else if .existingSecret }}
+    secret:
+      secretName: {{ .existingSecret }}
     {{- else }}
     emptyDir: {}
     {{- end }}
