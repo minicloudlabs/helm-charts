@@ -90,6 +90,8 @@ ingress:
   #      - gatus.local
 
 # Extra environment variables that will be pass onto deployment pods
+# Expects key: value
+# E.G. GATUS_CONFIG_PATH: /path/to/configs
 env: {}
 
 # Sidecar containers in the pod
