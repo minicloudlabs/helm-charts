@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Add support for existingSecret in extraVolumeMounts
+### Changed
+- Bump Gatus image v5.5.1 => v5.7.0
 
 ## [3.4.0] - 2023-07-29
 ### Changed
