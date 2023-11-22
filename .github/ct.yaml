@@ -5,4 +5,3 @@ chart-dirs:
   - charts
 chart-repos:
   - minicloudlabs=https://minicloudlabs.github.io/helm-charts
-helm-extra-args: --timeout 300s
