@@ -184,4 +184,11 @@ networkPolicy:
 
 # Gatus configuration
 # ref: https://github.com/TwiN/gatus#configuration
-config: {}
+config:
+  endpoints:
+    - name: example
+      url: https://example.org
+      interval: 60s
+      conditions:
+        - "[STATUS] == 200"
+        - "[BODY] == pat(*<h1>Example Domain</h1>*)"
