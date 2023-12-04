@@ -17,6 +17,16 @@ initContainers:
 {{- toYaml .Values.extraInitContainers | nindent 2 }}
 {{- end }}
 containers:
+{{- if .Values.sidecarContainers }}
+  {{- range $name, $spec :=  .Values.sidecarContainers }}
+  - name: {{ $name }}
+    {{- if not $spec.securityContext }}
+    securityContext:
+      {{- toYaml $.Values.securityContext | nindent 6 }}
+    {{- end }}
+    {{- toYaml $spec | nindent 4 }}
+  {{- end }}
+{{- end }}
   - name: {{ .Chart.Name }}
     securityContext:
       {{- toYaml .Values.securityContext | nindent 6 }}
@@ -75,16 +85,6 @@ containers:
         subPath: {{ .subPath | default "" }}
         readOnly: {{ .readOnly }}
     {{- end }}
-{{- if .Values.sidecarContainers }}
-  {{- range $name, $spec :=  .Values.sidecarContainers }}
-  - name: {{ $name }}
-    {{- if not $spec.securityContext }}
-    securityContext:
-      {{- toYaml $.Values.securityContext | nindent 6 }}
-    {{- end }}
-    {{- toYaml $spec | nindent 4 }}
-  {{- end }}
-{{- end }}
 volumes:
   - name: {{ include "common.names.fullname" . }}-config
     configMap:
