@@ -137,7 +137,7 @@ releases:
   - name: gatus
     namespace: gatus
     chart: minicloudlabs/gatus
-    version: 3.4.2
+    version: 3.4.3
     values:
       - persistence:
           enabled: true
