@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.4.3] - 2024-04-10
+### Changed
+- Move sidecarContainers to be first in the list of containers
+
 ## [3.4.2] - 2024-04-09
 ### Changed
 - Bump Gatus image v5.7.0 => v5.8.0
