@@ -14,8 +14,8 @@ jobs:
         with: { version: v3.14.3 }
 
       - name: Setup python
-        uses: actions/setup-python@v4
-        with: { python-version: '3.10', check-latest: true }
+        uses: actions/setup-python@v5
+        with: { python-version: '3.12', check-latest: true }
 
       - name: Setup chart-testing
         uses: helm/chart-testing-action@v2.6.0
