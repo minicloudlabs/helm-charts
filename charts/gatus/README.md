@@ -14,7 +14,7 @@ _See [helm repo](https://helm.sh/docs/helm/helm_repo/) for command documentation
 ## Install Chart
 
 ```console
-helm install --name [RELEASE_NAME] minicloudlabs/gatus
+helm install [RELEASE_NAME] minicloudlabs/gatus
 ```
 
 _See [configuration](#configuration) below._
