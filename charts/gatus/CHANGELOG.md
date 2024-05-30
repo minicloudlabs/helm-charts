@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.4.5] - 2024-05-30
+### Changed
+- Bump Gatus image v5.10.0 => v5.11.0
+
 ## [3.4.4] - 2024-04-21
 ### Changed
 - Bump Gatus image v5.8.0 => v5.10.0
@@ -228,7 +232,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial implementation
 
-[Unreleased]: https://github.com/minicloudlabs/helm-charts/compare/gatus-3.4.4...HEAD
+[Unreleased]: https://github.com/minicloudlabs/helm-charts/compare/gatus-3.4.5...HEAD
+[3.4.5]: https://github.com/minicloudlabs/helm-charts/compare/gatus-3.4.4...gatus-3.4.5
 [3.4.4]: https://github.com/minicloudlabs/helm-charts/compare/gatus-3.4.3...gatus-3.4.4
 [3.4.3]: https://github.com/minicloudlabs/helm-charts/compare/gatus-3.4.2...gatus-3.4.3
 [3.4.2]: https://github.com/minicloudlabs/helm-charts/compare/gatus-3.4.1...gatus-3.4.2
