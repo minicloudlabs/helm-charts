@@ -20,7 +20,7 @@ metadata:
     {{- end }}
 spec:
   endpoints:
-  - port: {{ .Values.service.portName }}
+  - port: {{ .Values.service.port }}
     {{- with .Values.serviceMonitor.interval }}
     interval: {{ . }}
     {{- end }}
