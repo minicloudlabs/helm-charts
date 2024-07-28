@@ -137,6 +137,8 @@ nodeSelector: {}
 # ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
 tolerations: []
 
+affinity: {}
+
 # Additional init containers (evaluated as template)
 # ref: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
 extraInitContainers: []

@@ -122,3 +122,7 @@ tolerations:
 {{ toYaml . | indent 2 }}
 {{- end }}
 {{- end }}
+{{- with .Values.affinity }}
+affinity:
+{{ toYaml . | indent 2 }}
+{{- end }}
