@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.4.6] - 2024-09-23
+### Changed
+- Gatus chart moved to https://github.com/TwiN/helm-charts
+
 ## [3.4.5] - 2024-05-30
 ### Changed
 - Bump Gatus image v5.10.0 => v5.11.0
