@@ -1,4 +1,7 @@
 {{- define "gatus.pod" -}}
+{{- if .Values.priorityClassName }}
+priorityClassName: {{ .Values.priorityClassName | quote }}
+{{- end }}
 {{- if .Values.hostNetwork.enabled }}
 hostNetwork: true
 {{- end }}
