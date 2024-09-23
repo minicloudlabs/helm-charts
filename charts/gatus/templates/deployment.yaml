@@ -35,4 +35,3 @@ spec:
         {{- end }}
     spec:
       {{- include "gatus.pod" . | nindent 6 }}
-      
