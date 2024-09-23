@@ -6,6 +6,12 @@
 
 The code is provided as-is with no warranties.
 
+## NOTE
+
+**THIS REPOSITORY IS NO LONGER MAINTAINED.**
+
+Please, read gatus chart migration notes: https://github.com/minicloudlabs/helm-charts/tree/main/charts/gatus
+
 ## Usage
 
 [Helm](https://helm.sh) must be installed to use the charts.
