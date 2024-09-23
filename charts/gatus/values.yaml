@@ -192,3 +192,7 @@ config:
       conditions:
         - "[STATUS] == 200"
         - "[BODY] == pat(*<h1>Example Domain</h1>*)"
+
+# Priority class name for the `Pod`.
+# ref: https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/#priorityclass
+priorityClassName:
